@@ -10,23 +10,7 @@ next: false
 
 [[toc]]
 
-## 1. inline 对内联优化的影响
-
-我们知道，inline 现在最主要的作用是允许函数、变量的定义在多个翻译单元出现。
-
-除此之外 inline 让编译器更倾向于内联优化（只是影响很小）。
-
-> LLVM IR 有一个 inlinehint 属性。根据 LLVM IR 参考文档关于 inlinehint 的说明:
->
-> 此属性表示源代码包含了一个提示，表明内联此函数是可取的(例如 C/C++ 中的"inline"关键字)。这只是一种提示，不会对内联器施加任何要求。
->
-> inline 关键字与优化有关，而且优化器会关心你是否添加了它，但也没有太大影响。如果你真的想要内联一个函数，我想你应该添加 always_inline 说明符，这是完全不同的情况：除非完全不可能，否则编译器将始终内联这些函数。
-
-<https://github.com/llvm/llvm-project/commit/74bb06c0f02e650ea9ec73729f41a620fc55a8ee>
-
-<https://godbolt.org/z/jfo35vvzf>
-
-## 2. 运行报错 "pure virtual method called"
+## 1. 运行报错 "pure virtual method called"
 
 这个问题一般是基类构造时、析构时或者析构后调用了纯虚函数。
 
@@ -86,7 +70,7 @@ void __cxa_pure_virtual(void) {
 
 扩展阅读：调用 deleted 虚函数的相关问题 <https://stackoverflow.com/questions/30596591/when-is-cxa-deleted-virtual-called>。
 
-## 3. `stdx::simd` 默认使用什么指令集
+## 2. `stdx::simd` 默认使用什么指令集
 
 cppref 上的 `stdx::simd` 默认模板是 `simd_abi::compatible`，可能会误以为是动态选择指令集。
 
@@ -111,11 +95,11 @@ GCC 14.2 编译参数 `-std=c++23 -march=x86-64 -mavx512f -O3`，这个生成的
 
 一般情况用 `stdx::native_simd` 就行了。
 
-## 4. 内存序 AcqRel，实际运行各个核会看到不一样的顺序吗
+## 3. 内存序 AcqRel，实际运行各个核会看到不一样的顺序吗
 
 因为缓存失效通知是异步送达的。<https://zh.cppreference.com/w/cpp/atomic/memory_order> 最后的例子中，假设双路主板，a 和 c 在一个插槽上，b 和 d 在另一个插槽上。
 
-## 5. 内存序先写后读的问题
+## 4. 内存序先写后读的问题
 
 ```cpp
 atomic<int> done;
@@ -144,7 +128,7 @@ done, waiting 读的内存序是 acquire，写是 release。并发调用 notify 
 
 也可以用屏障，但是开销比 seqcst 内存序大。
 
-## 6. 标记访问某个变量时必须持有某个锁
+## 5. 标记访问某个变量时必须持有某个锁
 
 Clang 的 Thread Safety Analysis。
 
@@ -161,7 +145,7 @@ struct BankAccount {
 };
 ```
 
-## 7. magic static
+## 6. magic static
 
 ```cpp
 void swapTwoPoints(std::pair<double,double>& a, std::pair<double,double>& b) {
@@ -182,7 +166,7 @@ magic static 可以用来实现单例模式。
 
 （代码来源是 <https://www.zhihu.com/question/451327108/answer/53592485454>）
 
-## 8. 拷贝构造的参数不加引用
+## 7. 拷贝构造的参数不加引用
 
 ```cpp
 struct T {
@@ -194,13 +178,13 @@ struct T {
 
 事实上编译器会报错 `error: invalid constructor; you probably meant 'T (const T&)'`。
 
-## 9. 为什么 L1 Cache 只有页内的位才能索引
+## 8. 为什么 L1 Cache 只有页内的位才能索引
 
 缓存一致性问题。
 
 虚拟地址分为页号（高位部分）和页内偏移（低位部分）。如果两个虚拟地址映射到同一物理地址时，这个物理地址就可以映射到不同的缓存组中。而虚拟 / 物理地址的页内偏移是一致的（翻译前后不变），就不会出现这个问题。
 
-## 10. 加 prefetch 性能是否有提升
+## 9. 加 prefetch 性能是否有提升
 
 经常没有提升。
 
@@ -208,7 +192,7 @@ struct T {
 
 所以满足上述条件的可以多花时间研究 prefetch。
 
-## 11. float 转换为相同二进制表示的 int
+## 10. float 转换为相同二进制表示的 int
 
 标准做法是 `std::bit_cast`（C++20），旧版本用 `memcpy`。不用担心性能，memcpy 第三个参数是常量会被编译器优化掉，从而没有函数调用开销。
 
@@ -224,9 +208,9 @@ int convert(float x) {
 
 > 读取并非最近写入的联合体成员是未定义行为。许多编译器以非标准语言扩展实现读取联合体的不活跃成员的能力。
 
-不标准且不推荐用 `reinterpret_cast`（是未定义行为，有类型别名问题）。
+不要用 `reinterpret_cast`，这个是未定义行为，有类型别名问题。
 
-## 12. 单元测试怎么测 private 函数
+## 11. 单元测试怎么测 private 函数
 
 好的实践是测接口功能而不是内部实现。如果你觉得你特别需要测 private 函数，很有可能意味着需要修改设计，把复杂的逻辑单独提出来一个工具类。
 
@@ -234,7 +218,7 @@ int convert(float x) {
 
 推荐阅读 <https://google.github.io/googletest/advanced.html#testing-private-code>。
 
-## 13. `unique_ptr` 的大小
+## 12. `unique_ptr` 的大小
 
 如果 Deleter 是默认的，或者是空类，大小是 8（一个指针的大小）。在实现上可以用空基类优化把这个 Deleter 空间搞掉。
 
