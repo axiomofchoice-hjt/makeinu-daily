@@ -57,7 +57,8 @@ var today = yesterday.add(1, 'day');
       text: '败犬日报 ' + yesterday.format("YYYY-MM-DD"),
       link: yesterday.format("YYYY/MM/DD")
     },
-    next: false
+    next: false,
+    publish: false,
   }), { encoding: 'utf8' });
   console.log(path.resolve(file));
 }
