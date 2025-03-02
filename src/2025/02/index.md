@@ -126,7 +126,7 @@ done, waiting 读的内存序是 acquire，写是 release。并发调用 notify 
 
 所以这里需要 seqcst 内存序。
 
-也可以用屏障，但是开销比 seqcst 内存序大。
+也可以用 std::atomic_thread_fence。
 
 ## 5. 标记访问某个变量时必须持有某个锁
 
