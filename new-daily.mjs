@@ -52,13 +52,13 @@ var today = yesterday.add(1, 'day');
   const file = 'src/' + today.format("YYYY/MM/DD") + ".md";
   fs.mkdirSync("src/" + today.format("YYYY/MM"), { recursive: true });
   fs.writeFileSync(file, matter.stringify('\n# {{ $frontmatter.title }}\n\n[[toc]]\n', {
-    title: '败犬日报 ' + today.format("YYYY-MM-DD"),
+    next: false,
     prev: {
       text: '败犬日报 ' + yesterday.format("YYYY-MM-DD"),
       link: yesterday.format("YYYY/MM/DD")
     },
-    next: false,
     publish: false,
+    title: '败犬日报 ' + today.format("YYYY-MM-DD"),
   }), { encoding: 'utf8' });
   console.log(path.resolve(file));
 }
