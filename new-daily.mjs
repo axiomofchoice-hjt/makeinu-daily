@@ -42,8 +42,8 @@ var today = yesterday.add(1, 'day');
   const str = fs.readFileSync(file, { encoding: 'utf8' });
   let mat = matter(str);
   mat.data.next = {
+    link: today.format("YYYY/MM/DD"),
     text: '败犬日报 ' + today.format("YYYY-MM-DD"),
-    link: today.format("YYYY/MM/DD")
   };
   fs.writeFileSync(file, matter.stringify(mat.content, mat.data), { encoding: 'utf8' });
 }
@@ -54,8 +54,8 @@ var today = yesterday.add(1, 'day');
   fs.writeFileSync(file, matter.stringify('\n# {{ $frontmatter.title }}\n\n[[toc]]\n', {
     next: false,
     prev: {
+      link: yesterday.format("YYYY/MM/DD"),
       text: '败犬日报 ' + yesterday.format("YYYY-MM-DD"),
-      link: yesterday.format("YYYY/MM/DD")
     },
     publish: false,
     title: '败犬日报 ' + today.format("YYYY-MM-DD"),
