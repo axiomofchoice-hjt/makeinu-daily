@@ -5,6 +5,8 @@ import getSidebar from './sidebar.mjs';
 import { writeFileSync } from 'fs';
 import path from 'path';
 
+const host = 'https://makeinu-daily.pages.dev';
+
 let articles = getArticles('src');
 const sidebar = getSidebar(articles);
 
@@ -22,6 +24,7 @@ export default defineConfig({
     sidebar,
 
     socialLinks: [
+      { icon: 'rss', link: `${host}/feed.rss` },
       { icon: 'github', link: 'https://github.com/axiomofchoice-hjt/makeinu-daily' }
     ],
     search: {
@@ -42,10 +45,10 @@ export default defineConfig({
     const feed = new Feed({
       title: "败犬日报",
       description: "C++ Makeinu Daily",
-      id: 'https://makeinu-daily.pages.dev',
-      link: 'https://makeinu-daily.pages.dev',
-      image: 'https://makeinu-daily.pages.dev/favicon.jpg',
-      favicon: 'https://makeinu-daily.pages.dev/favicon.ico',
+      id: host,
+      link: host,
+      image: `${host}/favicon.jpg`,
+      favicon: `${host}/favicon.ico`,
       copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
     });
 
@@ -63,8 +66,8 @@ export default defineConfig({
     for (const { url, excerpt, frontmatter, html } of posts) {
       feed.addItem({
         title: frontmatter.title,
-        id: `https://makeinu-daily.pages.dev${url}`,
-        link: `https://makeinu-daily.pages.dev${url}`,
+        id: `${host}${url}`,
+        link: `${host}${url}`,
         description: excerpt,
         content: html,
         date: frontmatter.date,
