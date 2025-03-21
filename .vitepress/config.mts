@@ -1,7 +1,9 @@
-import { defineConfig, DefaultTheme } from 'vitepress';
-import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss';
+import { defineConfig, createContentLoader, SiteConfig } from 'vitepress';
+import { Feed } from 'feed';
 import getArticles from './articles.mts';
 import getSidebar from './sidebar.mjs';
+import { writeFileSync } from 'fs';
+import path from 'path';
 
 let articles = getArticles('src');
 const sidebar = getSidebar(articles);
@@ -30,20 +32,45 @@ export default defineConfig({
       copyright: 'Copyright © 2024-present <a href="https://github.com/axiomofchoice-hjt">Axiomofchoice-hjt</a>'
     }
   },
-  vite: {
-    plugins: [
-      RssPlugin({
-        title: '败犬日报',
-        baseUrl: 'https://makeinu-daily.pages.dev',
-        copyright: 'Copyright (c) 2024-present, 败犬日报',
-        description: 'C++ 败犬日报',
-      })
-    ]
-  },
   markdown: {
     lineNumbers: true,
     math: true
   },
   cleanUrls: true,
   srcDir: 'src',
+  buildEnd: async (config: SiteConfig) => {
+    const feed = new Feed({
+      title: "败犬日报",
+      description: "C++ Makeinu Daily",
+      id: 'https://makeinu-daily.pages.dev',
+      link: 'https://makeinu-daily.pages.dev',
+      image: 'https://makeinu-daily.pages.dev/favicon.jpg',
+      favicon: 'https://makeinu-daily.pages.dev/favicon.ico',
+      copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
+    });
+
+    const posts = await createContentLoader('*/*/*.md', {
+      excerpt: true,
+      render: true,
+    }).load();
+
+    posts.sort(
+      (a, b) =>
+        +new Date(b.frontmatter.date as string) -
+        +new Date(a.frontmatter.date as string)
+    );
+
+    for (const { url, excerpt, frontmatter, html } of posts) {
+      feed.addItem({
+        title: frontmatter.title,
+        id: `https://makeinu-daily.pages.dev${url}`,
+        link: `https://makeinu-daily.pages.dev${url}`,
+        description: excerpt,
+        content: html,
+        date: frontmatter.date,
+      });
+    }
+
+    writeFileSync(path.join(config.outDir, 'feed.rss'), feed.rss2());
+  },
 });
