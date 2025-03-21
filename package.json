@@ -11,7 +11,7 @@
     "vitepress": "^1.3.4"
   },
   "scripts": {
-    "new": "node new-daily.mjs",
+    "new": "python script/new_daily.py",
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
