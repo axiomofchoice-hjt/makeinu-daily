@@ -1,4 +1,5 @@
 ---
+date: 2024-11-01
 title: 败犬のC++每月精选 2024-10
 prev: false
 next:
