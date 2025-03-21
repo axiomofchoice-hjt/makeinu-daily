@@ -23,11 +23,13 @@ for file in files:
             header.append(line)
     # 解析 yaml
     header = yaml.safe_load(''.join(header))
-    # 修改 publish 为 False
-    header['publish'] = False
+    # 修改 date
+    header['date'] = header['title'][-10:]
     # 写回
     with file.open('w', encoding='utf8') as f:
         f.write('---\n')
-        yaml.dump(header, f, allow_unicode=True)
+        str_header = yaml.dump(header, allow_unicode=True)
+        str_header = str_header.replace('\'', '')
+        f.write(str_header)
         f.write('---\n')
         f.writelines(lines[size:])
