@@ -1,17 +1,17 @@
 ---
-title: 败犬日报
-layout: home
 hero:
+  actions:
+  - link: 2025/03/21
+    text: 进入
+    theme: brand
+  image:
+    alt: 老八可爱
+    src: /favicon.jpg
   name: 败犬日报
   tagline: 老八可爱
-  actions:
-    - theme: brand
-      text: 进入
-      link: 2025/03/20
-  image:
-    src: /favicon.jpg
-    alt: 老八可爱
+layout: home
 publish: false
+title: 败犬日报
 ---
 
 ## 欢迎来到败犬日报
