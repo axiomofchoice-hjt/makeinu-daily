@@ -63,13 +63,14 @@ export default defineConfig({
         +new Date(a.frontmatter.date as string)
     );
 
+    const pattern = /<div class="line-numbers-wrapper" aria-hidden="true">.*?<\/div>/gs;
     for (const { url, excerpt, frontmatter, html } of posts) {
       feed.addItem({
         title: frontmatter.title,
         id: `${host}${url}`,
         link: `${host}${url}`,
         description: excerpt,
-        content: html,
+        content: html?.replaceAll(pattern, ''),
         date: frontmatter.date,
       });
     }
