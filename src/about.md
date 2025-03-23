@@ -12,9 +12,9 @@ title: 关于日报
 
 ## 友情链接
 
-[群主博客](https://zclll.com/)
+[败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
 
-[败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)
+[如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 
 ## 求合作
 
