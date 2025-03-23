@@ -2,15 +2,17 @@
 hero:
   actions:
   - link: 2025/03/21
-    text: 进入
+    text: 开始
     theme: brand
+  - link: about
+    text: 关于日报
+    theme: alt
   image:
     alt: 老八可爱
     src: /favicon.jpg
   name: 败犬日报
   tagline: 老八可爱
 layout: home
-publish: false
 title: 败犬日报
 ---
 
@@ -29,16 +31,6 @@ title: 败犬日报
 ## 加入败犬群！
 
 [退役败犬的C++奇妙之旅 786115408](https://qm.qq.com/q/NCJmtSyaoq)
-
-## 败犬日报如何诞生
-
-败犬群中经常遇到有价值的讨论，之前就有群友建议整理这些知识，这让我萌生了做败犬日报的想法。
-
-败犬日报不是专业媒体，只是个人兴趣使然。相比群里的技术大牛，我的水平有限，更多是分享和借鉴大家的见解。可以说，日报的价值完全来自群友们的智慧贡献。
-
-## 求合作
-
-招日报写手，没有就算了。
 
 <br/>
 

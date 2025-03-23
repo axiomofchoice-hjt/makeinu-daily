@@ -10,7 +10,7 @@ function recurse(dir: string, root: string): string[] {
       result = result.concat(recurse(path.join(dir, file), root));
     }
   }
-  if (stats.isFile() && dir.endsWith(".md")) {
+  if (stats.isFile() && dir.endsWith(".md") && path.relative(root, dir).replaceAll('\\', '/').includes('/')) {
     result.push(path.relative(root, dir.slice(0, -3)).replaceAll('\\', '/'));
   }
   return result;
