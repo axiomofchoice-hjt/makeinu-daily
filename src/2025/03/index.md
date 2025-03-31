@@ -21,7 +21,7 @@ next: false
 
 > You suddenly visualize that I am looking over your shoulders and say to yourself: "Dijkstra would not have liked this"
 
-另外，break label 的提案是有的，不知道能不能进标准 <https://open-std.org/JTC1/SC22/WG21/docs/papers/2025/p3568r0.html>。
+另外，break label 的提案是有的 <https://open-std.org/JTC1/SC22/WG21/docs/papers/2025/p3568r0.html>。
 
 ## 2. 异常会导致二进制膨胀
 
