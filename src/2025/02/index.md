@@ -4,7 +4,9 @@ title: 败犬のC++每月精选 2025-02
 prev:
     text: 败犬のC++每月精选 2025-01
     link: /2025/01
-next: false
+next:
+    text: 败犬のC++每月精选 2025-03
+    link: /2025/03
 ---
 
 # {{ $frontmatter.title }}
