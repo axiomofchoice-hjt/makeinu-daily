@@ -33,6 +33,7 @@ def read_markdown(file):
 
 
 def write_markdown(file, header, lines):
+    file.parent.mkdir(parents=True, exist_ok=True)
     with file.open("w", encoding="utf8") as f:
         f.write("---\n")
         str_header = yaml.dump(header, allow_unicode=True)
