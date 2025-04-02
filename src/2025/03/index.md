@@ -134,7 +134,7 @@ struct Array {
     int array[N];
 
     template <typename... Ts>
-    Array(Ts... args) : array(std::move(args)...) {}
+    Array(Ts... args) : array{std::move(args)...} {}
 
     template <typename... Ts>
     void assign(Ts... args) {
