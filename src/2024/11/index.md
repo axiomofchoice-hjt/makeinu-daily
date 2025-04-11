@@ -277,7 +277,7 @@ void unreachable() {
 }
 ```
 
-![img](https://pic1.zhimg.com/v2-892b8e8655452a4bcd93e4a5e9a6cc9c_r.jpg)
+![img](/img/2024-11-28-0.png)
 
 这是 clang 的一个 bug，clang 没给 main 生成一行代码，导致 main 函数地址和下面那个函数重叠了。现在已经修了。
 
@@ -289,13 +289,13 @@ void unreachable() {
 
 一种是使用时间函数的性能测试。比如 benchmark，进一步可以在程序中间获取时间，从而得到详细的 profile 图。下图是 PyTorch 的 profile 图：
 
-![img](https://pytorch.org/tutorials/_images/trace_img.png)
+![img](/img/2024-11-29-0.png)
 
 类似原理还有火焰图，以一个固定频率获取程序函数栈，就能知道什么函数耗时较长。
 
 火焰图可以分 off cpu 和 on cpu。火焰图宽的地方很难知道具体原因，这个时候就需要 strace/eBPF 看具体的 syscall 怎么回事。
 
-![img](https://static001.geekbang.org/infoq/9b/9b0fff7f30199b9b489f5628619618d4.png)
+![img](/img/2024-11-29-1.png)
 
 一种是 PMU 事件，通过硬件提供的 PMU 收集一些事件的计数，比如 cycle 数、指令数、cache miss、TLB Miss、分支预测失败、访存量、浮点运算次数等。进一步可以 topdown 分析。
 
