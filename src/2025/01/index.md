@@ -9,6 +9,8 @@ next:
     link: /2025/02
 ---
 
+![img](/img/2025-01-index.png)
+
 # {{ $frontmatter.title }}
 
 [[toc]]

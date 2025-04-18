@@ -7,6 +7,8 @@ prev:
 next: false
 ---
 
+![img](/img/2025-03-index.png)
+
 # {{ $frontmatter.title }}
 
 [[toc]]

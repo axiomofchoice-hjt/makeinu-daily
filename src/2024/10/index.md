@@ -7,6 +7,8 @@ next:
     link: /2024/11
 ---
 
+![img](/favicon.jpg)
+
 # {{ $frontmatter.title }}
 
 [[toc]]
