@@ -1,6 +1,6 @@
 # 欢迎来到败犬日报
 
-每日推送！
+C++ 话题每日推送！
 
 <https://makeinu-daily.pages.dev>
 
