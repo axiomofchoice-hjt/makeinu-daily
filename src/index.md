@@ -1,7 +1,7 @@
 ---
 hero:
   actions:
-  - link: 2025/04/23
+  - link: 2025/04/24
     text: 开始
     theme: brand
   - link: about
