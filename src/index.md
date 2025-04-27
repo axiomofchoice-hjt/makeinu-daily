@@ -11,7 +11,7 @@ hero:
     alt: 老八可爱
     src: /favicon.jpg
   name: 败犬日报
-  tagline: 老八可爱
+  tagline: 老八可爱捏
 layout: home
 title: 败犬日报
 ---
