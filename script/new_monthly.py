@@ -6,15 +6,18 @@ from datetime import datetime, timedelta
 root = Path(__file__).parent.parent / "src"
 
 files = []
-for file in root.rglob("*.md"):
-    # 只处理日报，排除月报的 index.md
-    if file.stem.isdigit():
+for file in root.rglob("index.md"):
+    # 只处理月报，排除主页 index.md
+    if file.parent.name != "src":
         files.append(str(file).replace("\\", "/"))
 
-previous = max(files)[-13:-3]
-previous_ = datetime.strptime(previous, r"%Y/%m/%d")
-current_ = previous_ + timedelta(days=1)
-current = current_.strftime(r"%Y/%m/%d")
+
+previous = max(files)[-16:-9]
+previous_ = datetime.strptime(previous, r"%Y/%m")
+current_ = previous_ + timedelta(days=31)
+current = current_.strftime(r"%Y/%m")
+next_ = current_ + timedelta(days=31)
+next = next_.strftime(r"%Y/%m")
 
 
 def read_markdown(file):
@@ -42,40 +45,31 @@ def write_markdown(file, header, lines):
         f.writelines(lines)
 
 
-# 更新 <root>/<previous>.md
-file = root / f"{previous}.md"
+# 更新 <root>/<previous>/index.md
+file = root / f"{previous}/index.md"
 header, lines = read_markdown(file)
 header = yaml.safe_load("".join(header))
 header["next"] = {
     "link": "/" + current,
-    "text": "败犬日报 " + current.replace("/", "-"),
+    "text": "败犬のC++每月精选 " + current.replace("/", "-"),
 }
 write_markdown(file, header, lines)
 
-# 创建 <root>/<current>.md
-file = root / f"{current}.md"
+# 创建 <root>/<today>.md
+file = root / f"{current}/index.md"
 header = {
-    "date": current.replace("/", "-"),
-    "title": "败犬日报 " + current.replace("/", "-"),
+    "date": next.replace("/", "-") + "-01",
+    "title": "败犬のC++每月精选 " + current.replace("/", "-"),
     "next": False,
     "prev": {
         "link": "/" + previous,
-        "text": "败犬日报 " + previous.replace("/", "-"),
+        "text": "败犬のC++每月精选 " + previous.replace("/", "-"),
     },
 }
 write_markdown(
     file,
     header,
-    [
-        f"\n# 败犬日报 {current.replace("/", "-")}\n\n[[toc]]\n\n今日无话题收录 :kissing_heart:\n"
-    ],
+    [f"\n# 败犬のC++每月精选 {current.replace("/", "-")}\n\n[[toc]]\n"],
 )
 
-print(root / f"{current}.md")
-
-# 更新 <root>/index.md
-file = root / "index.md"
-header, lines = read_markdown(file)
-header = yaml.safe_load("".join(header))
-header["hero"]["actions"][0]["link"] = current
-write_markdown(file, header, lines)
+print(root / f"{current}/index.md")
