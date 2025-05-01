@@ -7,11 +7,40 @@ prev:
 title: 败犬のC++每月精选 2025-04
 ---
 
+![img](/img/2025-04-index.png)
+
 # 败犬のC++每月精选 2025-04
 
 [[toc]]
 
-## 1. 继承中的 public private 影响内存布局
+本月份的 C++ 话题速览！
+
+## 1. 线程安全随机数和 thread_local magic static
+
+[往期](/2025/02/20)介绍了 magic static，为了保证线程安全会加锁。如果用 `thread_local` 就不会加锁。
+
+推荐线程安全随机数使用这个小寄巧。
+
+```cpp
+// 这个代码用了 openmp 的多线程，编译参数要加 -fopenmp
+#include <cstdio>
+#include <random>
+
+int randint(int min, int max) {
+    static thread_local std::mt19937 generator(std::random_device{}());
+    std::uniform_int_distribution<int> distribution(min, max);
+    return distribution(generator);
+}
+
+int main() {
+#pragma omp parallel
+    printf("%d\n", randint(1, 10));
+}
+```
+
+代码参考：<https://stackoverflow.com/questions/21237905/how-do-i-generate-thread-safe-uniform-random-numbers>
+
+## 2. 继承中的 public private 影响内存布局
 
 ```cpp
 #include <iostream>
@@ -72,13 +101,13 @@ C++98 定义 POD 要求数据成员都是 public，到了 C++11 才允许 privat
 
 public private 会影响内存布局，这个很反直觉啊。C++ 的坑太多了。
 
-## 2. std::sort 和 qsort 的性能对比
+## 3. std::sort 和 qsort 的性能对比
 
 qsort 类型信息损失太多了，根本不够看的。
 
 ![img](/img/2025-04-09-0.png)
 
-## 3. 用 constexpr if 实现 std::condition
+## 4. 用 constexpr if 实现 std::condition
 
 ```cpp
 #include <type_traits>
@@ -104,7 +133,7 @@ int main() {
 
 或者 `return std::type_identity<T>{};`，在外面 `::type` 获取类型。
 
-## 4. shared_ptr 传给函数，参数定义为裸指针是否合理
+## 5. shared_ptr 传给函数，参数定义为裸指针是否合理
 
 裸指针的语义是借用（即不获得所有权，不析构，和引用是类似的），只要函数保证局部使用，不长期持有，无论如何都不会寄。这样也不会限制 `shared_ptr` 类型，其他指针也能传。
 
@@ -117,31 +146,6 @@ int main() {
 上面对指针的使用建议，可以更扩展一点，就是如果保证指针、引用的生命周期可以被覆盖，这样传指针、引用都是没关系的。
 
 这个地方更极端一点就是，所有同步的场景都可以不用 shared_ptr，生命周期都是可控的。反之多线程、事件驱动异步之类 shared_ptr 就是最佳实践。
-
-## 5. 线程安全随机数和 thread_local magic static
-
-[往期](/2025/02/20)介绍了 magic static，为了保证线程安全会加锁。如果用 `thread_local` 就不会加锁。
-
-推荐线程安全随机数使用这个小寄巧。
-
-```cpp
-// 这个代码偷懒用了 openmp 的多线程，编译参数要加 -fopenmp
-#include <cstdio>
-#include <random>
-
-int randint(int min, int max) {
-    static thread_local std::mt19937 generator(std::random_device{}());
-    std::uniform_int_distribution<int> distribution(min, max);
-    return distribution(generator);
-}
-
-int main() {
-#pragma omp parallel
-    printf("%d\n", randint(1, 10));
-}
-```
-
-代码参考：<https://stackoverflow.com/questions/21237905/how-do-i-generate-thread-safe-uniform-random-numbers>
 
 ## 6. `priority_queue<unique_ptr<T>>` push 进去就出不来了
 
@@ -244,3 +248,9 @@ auto b = a;
 shared_ptr 的原子变量目的是保证不同 shared_ptr 的并发安全，重点是“不同”。
 
 同一个 shared_ptr 复制、移动、reset 等操作想要线程安全，只靠引用计数的几个原子变量是不行的，需要额外结构。这也是 `atomic<shared_ptr>` 做的事情。
+
+***
+
+都看到这里了，来关注一下败犬日报吧！
+
+[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [微信公众号](https://makeinu-daily.pages.dev/img/wechat.png) | [RSS](https://makeinu-daily.pages.dev/feed.rss)
