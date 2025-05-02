@@ -32,7 +32,7 @@ export default defineConfig({
       provider: 'local'
     },
     footer: {
-      message: 'Released under the <a href="https://github.com/axiomofchoice-hjt/makeinu-daily/blob/main/LICENSE">MIT License</a>.',
+      message: 'Released under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 License</a>.',
       copyright: 'Copyright © 2024-present <a href="https://github.com/axiomofchoice-hjt">Axiomofchoice-hjt</a>'
     }
   },
