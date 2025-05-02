@@ -1,7 +1,7 @@
 import { defineConfig, createContentLoader, SiteConfig } from 'vitepress';
-import { Feed } from 'feed';
 import getArticles from './articles.mts';
 import getSidebar from './sidebar.mjs';
+import feed from './feed.mjs';
 import { writeFileSync } from 'fs';
 import path from 'path';
 
@@ -43,39 +43,6 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: 'src',
   buildEnd: async (config: SiteConfig) => {
-    const feed = new Feed({
-      title: "败犬日报",
-      description: "C++ Makeinu Daily",
-      id: host,
-      link: host,
-      image: `${host}/favicon.jpg`,
-      favicon: `${host}/favicon.ico`,
-      copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
-    });
-
-    const posts = await createContentLoader('*/*/*.md', {
-      excerpt: true,
-      render: true,
-    }).load();
-
-    posts.sort(
-      (a, b) =>
-        +new Date(b.frontmatter.date as string) -
-        +new Date(a.frontmatter.date as string)
-    );
-
-    const pattern = /<div class="line-numbers-wrapper" aria-hidden="true">.*?<\/div>/gs;
-    for (const { url, excerpt, frontmatter, html } of posts) {
-      feed.addItem({
-        title: frontmatter.title,
-        id: `${host}${url}`,
-        link: `${host}${url}`,
-        description: excerpt,
-        content: html?.replaceAll(pattern, ''),
-        date: frontmatter.date,
-      });
-    }
-
-    writeFileSync(path.join(config.outDir, 'feed.rss'), feed.rss2());
+    writeFileSync(path.join(config.outDir, 'feed.rss'), await feed());
   },
 });
