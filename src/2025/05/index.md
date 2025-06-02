@@ -7,9 +7,13 @@ prev:
 title: 败犬のC++每月精选 2025-05
 ---
 
+![img](/img/2025-05-index.png)
+
 # 败犬のC++每月精选 2025-05
 
 [[toc]]
+
+本月的 C++ 话题速览！（2025-05）
 
 ## 1. char8_t 与严格别名的问题
 
@@ -215,3 +219,9 @@ delete this 之后不做任何跟 this 相关的事就没事，不过一般都�
 <https://www.zhihu.com/question/266674915/answer/3111080042> 有记载：
 
 > 没什么不能用的。标准规定这些容器不允许带final标识符就是让你可以继承这些容器。
+
+***
+
+都看到这了，来关注一下败犬日报吧！
+
+[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [微信公众号](https://makeinu-daily.pages.dev/img/wechat.png) | [RSS](https://makeinu-daily.pages.dev/feed.rss)
