@@ -54,6 +54,10 @@ C++ 允许别名的类型是 `char` `unsigned char` `std::byte`，C 是 `char` `
 
 有一说一，这些类型确实很混乱。
 
+***
+
+关于这条内容有一些错误，但是我加班没时间改了，可以看一下：[萧叶轩：一则网络上的错误信息产生始末](https://zhuanlan.zhihu.com/p/1913047240425046613)
+
 ## 2. Clang 16 不支持 `constexpr std::string`，到了 17 才支持
 
 这里是解释：
