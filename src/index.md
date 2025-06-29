@@ -1,7 +1,7 @@
 ---
 hero:
   actions:
-  - link: 2025/06/22
+  - link: 2025/06/23
     text: 开始
     theme: brand
   - link: about
@@ -31,6 +31,8 @@ C++ 话题每日推送！
 ## 加入败犬群！
 
 [退役败犬的C++奇妙之旅 786115408](https://qm.qq.com/q/NCJmtSyaoq)
+
+## 败犬日报还没有邮件推送，在线求大佬教学！
 
 <br/>
 
