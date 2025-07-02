@@ -19,6 +19,8 @@ prev: false
 
 [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 
+[cppref](https://en.cppreference.com/)，[中文镜像](https://web.archive.org/web/20250311170445/https://zh.cppreference.com/w/)，[中文镜像](https://cppref.juvw.xyz:2333/)
+
 ## 求合作
 
 招日报写手，投稿也行。没有就算了。
