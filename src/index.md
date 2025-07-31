@@ -1,7 +1,7 @@
 ---
 hero:
   actions:
-  - link: 2025/07/26
+  - link: 2025/07/27
     text: 开始
     theme: brand
   - link: about
