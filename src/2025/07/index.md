@@ -75,8 +75,7 @@ foo({.a = 0, .b = 1});
 
 这个指派初始化是 C++20 的，20 之前使用也没什么问题（编译器扩展）。
 
-但是有个缺点是参数必须按顺序初始化。这个需求有一个 linter 下位替代，clang-tidy 的 bugprone-argument-comment
-如果要允许乱序的话问题有点大，主要是求值顺序的问题（实参的求值顺序和形参初始化的顺序）。详见乱序指派初始化（就是乱序 `{ .x = y}`）提案 <https://wg21.link/p3405>。
+但是有个缺点是参数必须按顺序初始化。这个需求有一个 linter 下位替代，clang-tidy 的 bugprone-argument-comment。如果要允许乱序的话问题有点大，主要是求值顺序的问题（实参的求值顺序和形参初始化的顺序）。详见乱序指派初始化提案 <https://wg21.link/p3405>。
 
 最后还有个炫技的命名参数实现 <https://godbolt.org/z/16EWPnxfT>（看一乐）。
 
@@ -313,7 +312,7 @@ using T1 = is_specialization_of<std::array<int, 1>, std::array>;
 using T2 = is_specialization_of<std::vector<int>, std::vector>;
 ```
 
-[往期](/2025/05/24)提到的 univeral template 提案可以处理这个问题，但是也没过。
+[往期](/2025/05/24)提到的 universal template 提案可以处理这个问题，但是也没过。
 
 C++26 反射能解决，但是模板参数类型得是反射得到的类型（std::meta::info），不能直接填类型和模板。
 
@@ -325,7 +324,7 @@ C++26 反射能解决，但是模板参数类型得是反射得到的类型（st
 
 ## 14. 一些文章
 
-Don't ask to ask, just ask <https://dontasktoask.com/> 就把网址贴群里。
+Don't ask to ask, just ask <https://dontasktoask.com/>
 
 jemalloc 生平，原文 <https://jasone.github.io/2025/06/12/jemalloc-postmortem/> 翻译 <https://zclll.com/index.php/default/jemalloc-postmortem.html>
 
