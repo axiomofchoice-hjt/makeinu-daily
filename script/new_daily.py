@@ -1,5 +1,4 @@
 from pathlib import Path
-from httpx import head
 import yaml
 from datetime import datetime, timedelta
 
