@@ -35,7 +35,7 @@ int foo(E e) {
 inline void unreachable() {}
 ```
 
-虽然这是 MSVC 独有，但是事实上标准允许 enum 的值不在“命名枚举值”的的范围内，还是要注意的（最好写 default return）。<https://en.cppreference.com/w/cpp/language/enum.html> 有记载：
+虽然这是 MSVC 独有，但是事实上标准允许 enum 的值不在“命名枚举值”的范围内，还是要注意的（最好写 default return）。<https://en.cppreference.com/w/cpp/language/enum.html> 有记载：
 
 > Values of integer, floating-point, and enumeration types can be converted to any enumeration type by using static_cast. Note that the value after such conversion may not necessarily equal any of the named enumerators defined for the enumeration: ...
 >
@@ -56,7 +56,7 @@ void foo(int b, int a);
 
 > C++ 是面向对象的语言，所以决定不提供这个功能。你的参数如果需要这么写，那请打包成一个对象。
 
-但是这和面向对象没什么关系（C++ 是多范式语言），正经人都不喜欢啰嗦的 `FunBuilder.setA().setB().setC().build()`。
+但是这和面向对象没什么关系（C++ 是多范式语言），正经人都不喜欢啰嗦的 `FunBuilder.setA().setB().setC().build()`（更新，这个不啰嗦，啰嗦的是 setter 定义）。
 
 ***
 
