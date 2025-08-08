@@ -39,7 +39,7 @@ public:
 
 class MockA : public A {
 public:
-    DEBUG_VIRTUAL void foo() override {
+    DEBUG_VIRTUAL void foo() {
         // 这是MockA的逻辑
     }
 };
@@ -64,23 +64,7 @@ void testB() {
 
 只要不打开 std 就不是未定义行为。不过这个未定义行为用的人很多，所以其实不是很严重的问题。
 
-打开 std 的写法：
-
-```cpp
-namespace std {  // 这行是未定义行为
-template <>
-struct hash<pair<int, int>> { ... };
-}
-```
-
-不打开 std 的写法：
-
-```cpp
-template <>
-struct std::hash<std::pair<int, int>> { ... };
-```
-
-但是，对 pair 这种标准库类型进行特化，实践上并不好，应该自己封装一个类型。
+更新：错误，和是否打开 std 无关，对标准库的类模板特化需要依赖至少一个用户定义类型，因此这个例子一定是 UB。应该自己封装一个类型。
 
 至于怎么实现 pair 的哈希算法，可以参考 boost::hash, boost::hash_combine。
 
@@ -90,7 +74,7 @@ struct std::hash<std::pair<int, int>> { ... };
 
 tcp 校验和主要防止比特翻转，需要至少翻转 2 位（翻转的位置也有要求）才能误判，这导致概率很小。
 
-git commit 的哈希用的是 SHA-1，位数足够多，生成 1e24 个 sha1 才有可能碰撞，git 仓库顶天有 1e10 个 object，所以很难碰撞。
+git commit 的哈希用的是 SHA-1，位数足够多，平均每 1e24 个sha1 碰撞 1 次，git 仓库顶天有 1e10 个 object，所以很难碰撞。
 
 git 为了分布式就必须用 hash，所以只能是尽量减小碰撞概率。
 
@@ -120,15 +104,11 @@ int main() {
 
 可能的结果是 "91b2a3" (GCC 15.1 无编译参数)，只替换了 `s[0]`。因为 `std::replace` 的第三个参数是 `const T&`，这个值在函数里发生了改变。
 
-正确方法：
+推荐方法：
 
 ```cpp
-std::replace(s.begin(), s.end(), (char)s[0], '9');
-// 或者
-std::replace(s.begin(), s.end(), +s[0], '9');
-// 或者
-char target = s[0];
-std::replace(s.begin(), s.end(), target, '9');
+std::replace(s.begin(), s.end(), auto{s[0]}, '9');
+// 更新：移除了 (char)s[0] / +s[0] / char target = s[0]; 做法，统一为 auto{s[0]}
 ```
 
 这个是真的坑，很多 algorithm 函数都传引用。cppref 的 Notes 也提到了这点。<https://en.cppreference.com/w/cpp/algorithm/replace.html>
