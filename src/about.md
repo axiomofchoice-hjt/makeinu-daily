@@ -17,9 +17,13 @@ prev: false
 
 [败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
 
+[cppref](https://en.cppreference.com/)，[中文镜像](https://web.archive.org/web/20250311170445/https://zh.cppreference.com/w/)，[中文镜像](https://cppref.juvw.xyz:2333/)
+
+## 一些常见问题
+
 [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 
-[cppref](https://en.cppreference.com/)，[中文镜像](https://web.archive.org/web/20250311170445/https://zh.cppreference.com/w/)，[中文镜像](https://cppref.juvw.xyz:2333/)
+[群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
 
 ## 求合作
 
