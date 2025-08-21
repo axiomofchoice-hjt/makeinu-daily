@@ -1,17 +1,25 @@
 ---
 date: 2025-3-23
-title: 关于日报
+title: 什么是败犬日报
 next: false
 prev: false
 ---
 
 # 关于日报
 
-## 败犬日报如何诞生
+## 日报记录什么
 
-败犬群中经常遇到有价值的讨论，之前就有群友建议整理这些知识，这让我萌生了做败犬日报的想法。
+摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解。
 
-败犬日报更多是分享和借鉴群友的见解，可以说，日报的价值完全来自群友们的智慧贡献。
+## 订阅日报
+
+每日推送 [RSS](https://makeinu-daily.pages.dev/feed.rss)
+
+每月推送 [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) [微信公众号](https://makeinu-daily.pages.dev/img/wechat.png)
+
+## 互动环节
+
+评论区或[进群](https://qm.qq.com/q/NCJmtSyaoq)对线！
 
 ## 友情链接
 
@@ -24,7 +32,3 @@ prev: false
 [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 
 [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
-
-## 求合作
-
-招日报写手，投稿也行。没有就算了。
