@@ -2,8 +2,10 @@
 features:
   - title: 每日推送
     link: 2025/08/18
+    details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
   - title: 每月推送
-    link: 2025/07
+    link: https://www.zhihu.com/column/c_1846629212653506560
+    details: 精选一些有意思的话题
 hero:
   actions:
   - link: 2025/08/18
@@ -25,17 +27,27 @@ title: 败犬日报
 
 C++ 话题每日推送！
 
-以及每月推送精选内容：
+## 订阅日报
 
-2024 [10 月](2024/10/)，[11 月](2024/11/)，[12 月](2024/12/)。
+每日推送：[RSS](https://makeinu-daily.pages.dev/feed.rss)
 
-2025 [1 月](2025/01/)，[2 月](2025/02/)，[3 月](2025/03/)，[4 月](2025/04/)，[5 月](2025/05/)，[6 月](2025/06/)，[7 月](2025/07/)。
+每月推送：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)，[微信公众号](https://makeinu-daily.pages.dev/img/wechat.png)
 
-[在知乎上看](https://zhuanlan.zhihu.com/column/c_1846629212653506560)。
+## 互动环节
 
-## 加入败犬群！
+任何建议可以发评论区或[进群](https://qm.qq.com/q/NCJmtSyaoq)对线！
 
-[退役败犬的C++奇妙之旅 786115408](https://qm.qq.com/q/NCJmtSyaoq)
+## 友情链接
+
+[败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
+
+[cppref](https://en.cppreference.com/)，[中文镜像](https://web.archive.org/web/20250311170445/https://zh.cppreference.com/w/)，[中文镜像](https://cppref.juvw.xyz:2333/)
+
+## 一些常见问题
+
+[如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
+
+[群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
 
 <br/>
 
