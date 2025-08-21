@@ -7,7 +7,7 @@ prev:
 title: 败犬のC++每月精选 2025-07
 ---
 
-![img](/img/2025-08-index.png)
+![img](/img/2025-07-index.png)
 
 # 败犬のC++每月精选 2025-07
 
