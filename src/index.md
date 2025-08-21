@@ -16,7 +16,8 @@ hero:
     theme: alt
   image:
     alt: 老八可爱
-    src: /favicon.jpg
+    light: /favicon.jpg
+    dark: /favicon-dark.jpg
   name: 败犬日报
   tagline: 老八可爱捏
 layout: home
