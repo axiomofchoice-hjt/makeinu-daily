@@ -1,14 +1,14 @@
 ---
 features:
-  - title: 每日推送
-    link: 2025/08/18
-    details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
-  - title: 每月推送
-    link: https://www.zhihu.com/column/c_1846629212653506560
-    details: 精选一些有意思的话题
+- details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
+  link: 2025/08/18
+  title: 每日推送
+- details: 精选一些有意思的话题
+  link: https://www.zhihu.com/column/c_1846629212653506560
+  title: 每月推送
 hero:
   actions:
-  - link: 2025/08/18
+  - link: 2025/08/19
     text: 开始
     theme: brand
   - link: about
@@ -16,8 +16,8 @@ hero:
     theme: alt
   image:
     alt: 老八可爱
-    light: /favicon.jpg
     dark: /favicon-dark.jpg
+    light: /favicon.jpg
   name: 败犬日报
   tagline: 老八可爱捏
 layout: home
