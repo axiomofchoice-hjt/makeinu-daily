@@ -1,11 +1,11 @@
 ---
 features:
 - details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
-  link: 2025/08/18
+  link: 2025/08/20
   title: 每日推送
 - details: 精选一些有意思的话题
   link: https://www.zhihu.com/column/c_1846629212653506560
-  title: 每月推送
+  title: 每月精选
 hero:
   actions:
   - link: 2025/08/20
@@ -32,7 +32,7 @@ C++ 话题每日推送！
 
 每日推送：[RSS](https://makeinu-daily.pages.dev/feed.rss)
 
-每月推送：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)，[微信公众号](https://makeinu-daily.pages.dev/img/wechat.png)
+每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)，[微信公众号](https://makeinu-daily.pages.dev/img/wechat.png)
 
 ## 互动环节
 

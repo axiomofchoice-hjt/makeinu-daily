@@ -77,4 +77,5 @@ file = root / "index.md"
 header, lines = read_markdown(file)
 header = yaml.safe_load("".join(header))
 header["hero"]["actions"][0]["link"] = current
+header["features"][0]["link"] = current
 write_markdown(file, header, lines)
