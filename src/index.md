@@ -8,7 +8,7 @@ features:
   title: 每月推送
 hero:
   actions:
-  - link: 2025/08/19
+  - link: 2025/08/20
     text: 开始
     theme: brand
   - link: about
