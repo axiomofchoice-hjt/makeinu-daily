@@ -4,21 +4,26 @@ C++ 话题每日推送！
 
 <https://makeinu-daily.pages.dev>
 
-## 加入败犬群！
+## 订阅日报
 
-[退役败犬的C++奇妙之旅 786115408](https://qm.qq.com/q/NCJmtSyaoq)
+每日推送：[RSS](https://makeinu-daily.pages.dev/feed.rss)
 
-## 败犬日报如何诞生
+每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)，[微信公众号](https://makeinu-daily.pages.dev/img/wechat.png)
 
-败犬群中经常遇到有价值的讨论，之前就有群友建议整理这些知识，这让我萌生了做败犬日报的想法。
+## 互动环节
 
-败犬日报更多是分享和借鉴群友的见解，可以说，日报的价值完全来自群友们的智慧贡献。
+任何建议可以发评论区或[进群](https://qm.qq.com/q/NCJmtSyaoq)对线！
 
-## 求合作
+## 友情链接
 
-招日报写手，投稿也行。没有就算了。
+[败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
 
-## 败犬日报还没有邮件推送，在线求大佬教学！
+[cppref](https://en.cppreference.com/)，[中文镜像](https://web.archive.org/web/20250311170445/https://zh.cppreference.com/w/)，[中文镜像](https://cppref.juvw.xyz:2333/)
+
+一些常见问题：
+
+1. [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
+2. [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
 
 <!--
 ## TODO
