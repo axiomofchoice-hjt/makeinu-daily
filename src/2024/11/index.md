@@ -283,7 +283,7 @@ void unreachable() {
 
 这是 clang 的一个 bug，clang 没给 main 生成一行代码，导致 main 函数地址和下面那个函数重叠了。现在已经修了。
 
-那么无副作用的死循环是 UB 吗，这个之前一直有争议，p2809r0 已经确定不是 UB 了。<https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2809r0.html>
+那么无副作用的死循环是 UB 吗，这个之前一直有争议，p2809r0 已经确定不是 UB 了（更新：这个是不对的，p2809 只定义了平凡无副作用死循环，但是非平凡的还是 UB）。<https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2809r0.html>
 
 ## 13. 性能是怎么分析的
 
