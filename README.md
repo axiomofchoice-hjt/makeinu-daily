@@ -18,7 +18,7 @@ C++ 话题每日推送！
 
 [败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
 
-[cppref](https://en.cppreference.com/)，[中文镜像](https://web.archive.org/web/20250311170445/https://zh.cppreference.com/w/)，[中文镜像](https://cppref.juvw.xyz:2333/)
+[cppref](https://en.cppreference.com/)，[中文镜像](https://cppref.juvw.xyz:2333/)
 
 一些常见问题：
 
