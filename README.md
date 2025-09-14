@@ -24,6 +24,7 @@ C++ 话题每日推送！
 
 1. [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 2. [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
+3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)
 
 <!--
 ## TODO

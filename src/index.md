@@ -1,14 +1,14 @@
 ---
 features:
 - details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
-  link: 2025/09/09
+  link: 2025/09/10
   title: 每日推送
 - details: 精选一些有意思的话题
   link: https://www.zhihu.com/column/c_1846629212653506560
   title: 每月精选
 hero:
   actions:
-  - link: 2025/09/09
+  - link: 2025/09/10
     text: 开始
     theme: brand
   - link: about
@@ -48,6 +48,7 @@ C++ 话题每日推送！
 
 1. [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 2. [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
+3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)
 
 <br/>
 
