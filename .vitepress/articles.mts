@@ -25,16 +25,15 @@ function isNumericString(str: string): boolean {
   return true;
 }
 
-function isNumericFileName(str: string): boolean {
-  // 这里 .md 已经被移除了，直接用 basename
-  return isNumericString(path.basename(str));
-}
-
 export default (root: string) => {
   let result = recurse(root, root);
-  result.sort((dir1: string, dir2: string) => { // index 排在前面
-    if (isNumericFileName(dir1) != isNumericFileName(dir2)) {
-      return +isNumericFileName(dir1) - +isNumericFileName(dir2);
+  result.sort((dir1: string, dir2: string) => {
+    // topic 排在最前，index 其次，数字文件名排后面
+    if (dir1.startsWith('topic/') != dir2.startsWith('topic/')) {
+      return dir1.startsWith('topic/') ? -1 : 1;
+    }
+    if (dir1.endsWith('/index') != dir2.endsWith('/index')) {
+      return dir1.endsWith('/index') ? -1 : 1;
     }
     return dir1.localeCompare(dir2);
   });

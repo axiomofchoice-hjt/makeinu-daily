@@ -15,16 +15,25 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
     if (item.items === undefined) { return; } // make language server happy
     item.collapsed = collapsed;
     recurse(item.items, article.slice(1), link, collapsed);
-  } else if (article[0] != 'index') {
-    sidebar.push({ text: link.replaceAll('/', '-'), link });
+  } else {
+    if (link.startsWith('topic/')) {
+      sidebar.push({ text: article[0], link });
+    } else if (link.endsWith('/index')) {
+      sidebar.push({ text: "每月精选", link });
+    } else {
+      sidebar.push({ text: link.replaceAll('/', '-'), link });
+    }
   }
 }
 
 export default (articles: string[]) => {
+  console.log(articles);
   let sidebar: DefaultTheme.SidebarItem[] = [];
   articles.forEach(article => {
     recurse(sidebar, article.split("/"), '', article !== articles[articles.length - 1]);
   });
-  sidebar.forEach(item => { item.collapsed = undefined; });
+  sidebar.forEach(item => {
+    if (item.text != 'topic') { item.collapsed = undefined; }
+  });
   return sidebar;
 };
