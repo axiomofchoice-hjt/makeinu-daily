@@ -69,10 +69,10 @@ int main() {
 这个例子也是类似的。直接这么写是不对的：
 
 ```cpp
-#define macro(x) int x_##__LINE__ = 0
+#define macro(x) int x##__LINE__ = 0
 
 int main() {
-    macro(x);  // 替换为 int x____LINE__ = 0;
+    macro(x);  // 替换为 int x__LINE__ = 0;
 }
 ```
 
@@ -84,7 +84,7 @@ int main() {
 #define macro(x) int CONCAT(x, __LINE__) = 0
 
 int main() {
-    macro(x);  // int x3 = 0;
+    macro(x);  // int x6 = 0;
 }
 ```
 
@@ -92,7 +92,7 @@ int main() {
 
 `MACRO(std::array<int, 2>)`，会被当成两个参数 `std::array<int` 和 `2>`。
 
-一般可以套个小括号搞定 `MACRO((std::array<int, 2>))`。
+一般可以套个小括号搞定 `MACRO((std::array<int, 2>))`。如果这是最后一个参数也可以修改宏的定义，用变长参数 `...` `__VA_ARGS__`。
 
 如果搞不定，就要用 boost 的宏 `BOOST_IDENTITY_TYPE`（或者参考它的实现）。
 
@@ -161,7 +161,7 @@ C 语言，有没有办法让 `f(1)` 调用函数 `f1`，`f(1, 2)` 调用函数 
 虽然有上限，不够完美，但很多时候够了。基于这个和上文提到的 CONCAT，我们可以完成如下操作：
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 #define CONCAT_(x, y) x##y
 #define CONCAT(x, y) CONCAT_(x, y)
@@ -173,8 +173,8 @@ C 语言，有没有办法让 `f(1)` 调用函数 `f1`，`f(1, 2)` 调用函数 
     __COUNT_ARGS(, ##__VA_ARGS__, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, \
                  2, 1, 0)
 
-void f1(int a) { std::cout << "f1: " << a << std::endl; }
-void f2(int a, int b) { std::cout << "f2: " << a << ", " << b << std::endl; }
+void f1(int a) { printf("f1: %d\n", a); }
+void f2(int a, int b) { printf("f2: %d, %d\n", a, b); }
 
 #define f(...) CONCAT(f, COUNT_ARGS(__VA_ARGS__))(__VA_ARGS__)
 
