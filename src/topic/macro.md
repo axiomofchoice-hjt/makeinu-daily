@@ -117,7 +117,7 @@ int g() {
 }
 ```
 
-还可以借助 boost 实现：<https://godbolt.org/z/387nbc419>
+还可以借助 boost 实现：<https://godbolt.org/z/387nbc419>。
 
 ## 7. include 的参数可以是宏
 
@@ -151,7 +151,7 @@ void foo() {
 
 ## 10. 根据参数个数的分发
 
-C 语言，有没有办法让 `f(1)` 调用函数 `f1`，`f(1, 2)` 调用函数 `f2` 呢？有的兄弟，有的。这是一段 [linux 的代码](https://github.com/torvalds/linux/blob/d51e783c17bab0c139bf78d6bd9d1f66673f7903/include/linux/args.h)
+C 语言，有没有办法让 `f(1)` 调用函数 `f1`，`f(1, 2)` 调用函数 `f2` 呢？有的兄弟，有的。这是一段 [linux 的代码](https://github.com/torvalds/linux/blob/d51e783c17bab0c139bf78d6bd9d1f66673f7903/include/linux/args.h)：
 
 ```cpp
 #define __COUNT_ARGS(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _n, X...) _n
