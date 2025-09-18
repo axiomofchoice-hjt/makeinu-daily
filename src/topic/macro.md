@@ -147,7 +147,83 @@ void foo() {
 }
 ```
 
-## 9. x-macro 和头文件结合
+## 9. x-macro
+
+x-macro 是一种批量代码生成技术。例如经典问题之 enum to string，就可以用 x-macro 完成。
+
+例如我们想要做一个数据类型的 enum，首先定义一个 x-macro 遍历 enum：
+
+```cpp
+#define TYPE_TABLE  \
+    X(I32, int32_t) \
+    X(I64, int64_t) \
+    X(F32, float)   \
+    X(F64, double)
+```
+
+使用 x-macro 需要前后用 `#define` `#undef` 包裹，描述代码如何生成：
+
+```cpp
+enum class DataType {
+#define X(name, type) name,
+    TYPE_TABLE
+#undef X
+};
+
+const char* typeToString[] = {
+#define X(name, type) #name,
+    TYPE_TABLE
+#undef X
+};
+```
+
+完整代码：
+
+```cpp
+#include <cstdint>
+#include <cstdio>
+#include <type_traits>
+
+#define TYPE_TABLE  \
+    X(I32, int32_t) \
+    X(I64, int64_t) \
+    X(F32, float)   \
+    X(F64, double)
+
+enum class DataType {
+#define X(name, type) name,
+    TYPE_TABLE
+#undef X
+};
+
+const char* typeToString[] = {
+#define X(name, type) #name,
+    TYPE_TABLE
+#undef X
+};
+
+template <typename T>
+DataType getDataType() {
+#define X(name, type)                        \
+    if constexpr (std::is_same_v<T, type>) { \
+        return DataType::name;               \
+    } else
+    TYPE_TABLE
+#undef X
+    {
+        static_assert(false, "Unsupported type");
+    }
+}
+
+int main() {
+    printf("DataType::I64 = %d\n", static_cast<int>(getDataType<int64_t>()));
+    printf("typeToString[DataType::F32] = %s\n",
+           typeToString[static_cast<int>(DataType::F32)]);
+    return 0;
+}
+```
+
+如果有类似需求，最好可以用反射或反射库，因为代码生成的可读性是很糟糕的。
 
 ## 10. 根据参数个数的分发
 
@@ -157,6 +233,8 @@ C 语言，有没有办法让 `f(1)` 调用函数 `f1`，`f(1, 2)` 调用函数 
 #define __COUNT_ARGS(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _n, X...) _n
 #define COUNT_ARGS(X...) __COUNT_ARGS(, ##X, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
 ```
+
+（此处的 `X...` `, ##X` 是 GCC 扩展，MSVC 不支持，可以改成更通用的编译器扩展 `...` `, ##__VA_ARGS__`）
 
 虽然有上限，不够完美，但很多时候够了。基于这个和上文提到的 CONCAT，我们可以完成如下操作：
 
@@ -185,7 +263,59 @@ int main() {
 }
 ```
 
-## 11. 写在最后
+## 11. C 语言允许调试的泛型编程
+
+假设我要用 C 语言实现一个泛型 array 的结构和功能，一般可以这么写：
+
+```cpp
+#define DEFINE_ARRAY_TYPE(name, type, size, print_function) \
+    typedef struct {                                        \
+        type data[size];                                    \
+    } name;                                                 \
+    static inline void print_function(const name* arr) {    \
+        for (int i = 0; i < size; i++) {                    \
+            printf("%d ", (int)arr->data[i]);               \
+        }                                                   \
+        printf("\n");                                       \
+    }
+```
+
+众所周知宏有调试困难的缺点，没有调试信息，也就无法正常的单步调试。
+
+这时就可以用头文件实现 array 的主体，而参数则由额外的宏传入：
+
+```c
+// array_def.h
+typedef struct {
+    TYPE data[SIZE];
+} NAME;
+static inline void PRINT_FUNCTION(const NAME* arr) {
+    for (int i = 0; i < SIZE; i++) {
+        printf("%d ", (int)arr->data[i]);
+    }
+    printf("\n");
+}
+```
+
+```cpp
+// main.c
+#include <stdio.h>
+
+#define TYPE int
+#define SIZE 5
+#define NAME array_t
+#define PRINT_FUNCTION print_array
+#include "array_def.h"
+
+int main() {
+    array_t arr = {.data = {1, 2, 3, 4, 5}};
+    print_array(&arr);  // 输出 1 2 3 4 5
+}
+```
+
+这个做法其实就是代码生成，那么代价也很难蚌，即破坏可读性（怎么感觉说过了）和破坏 language server 的静态分析。C 的泛型编程仍然是一件很麻烦的事。
+
+## 12. 写在最后
 
 能力有限，只能讲几个宏的简单寄巧。[C/C++ 宏编程的艺术 - BOT Man的文章 - 知乎](https://zhuanlan.zhihu.com/p/152354031) 这篇文章讲到更多魔法，包括符号匹配、数值运算等，感兴趣的可以看看。
 
