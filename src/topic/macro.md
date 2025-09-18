@@ -5,6 +5,8 @@ prev: false
 title: 败犬のC++专题 宏魔法篇
 ---
 
+![img](/img/topic-macro-cover.png)
+
 # 败犬のC++专题 宏魔法篇
 
 [[toc]]

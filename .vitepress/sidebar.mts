@@ -27,7 +27,6 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
 }
 
 export default (articles: string[]) => {
-  console.log(articles);
   let sidebar: DefaultTheme.SidebarItem[] = [];
   articles.forEach(article => {
     recurse(sidebar, article.split("/"), '', article !== articles[articles.length - 1]);
