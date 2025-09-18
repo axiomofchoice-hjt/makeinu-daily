@@ -149,7 +149,7 @@ void foo() {
 
 ## 9. x-macro
 
-x-macro 是一种批量代码生成技术。例如经典问题之 enum to string，就可以用 x-macro 完成。
+x-macro 是一种批量代码生成技术。经典问题之 enum to string，就可以用 x-macro 完成。
 
 例如我们想要做一个数据类型的 enum，首先定义一个 x-macro 遍历 enum：
 
