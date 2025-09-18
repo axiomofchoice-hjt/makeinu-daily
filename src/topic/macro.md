@@ -177,32 +177,6 @@ const char* typeToString[] = {
     TYPE_TABLE
 #undef X
 };
-```
-
-完整代码：
-
-```cpp
-#include <cstdint>
-#include <cstdio>
-#include <type_traits>
-
-#define TYPE_TABLE  \
-    X(I32, int32_t) \
-    X(I64, int64_t) \
-    X(F32, float)   \
-    X(F64, double)
-
-enum class DataType {
-#define X(name, type) name,
-    TYPE_TABLE
-#undef X
-};
-
-const char* typeToString[] = {
-#define X(name, type) #name,
-    TYPE_TABLE
-#undef X
-};
 
 template <typename T>
 DataType getDataType() {
@@ -216,13 +190,22 @@ DataType getDataType() {
         static_assert(false, "Unsupported type");
     }
 }
+```
 
-int main() {
-    printf("DataType::I64 = %d\n", static_cast<int>(getDataType<int64_t>()));
-    printf("typeToString[DataType::F32] = %s\n",
-           typeToString[static_cast<int>(DataType::F32)]);
-    return 0;
-}
+还可以把 x-macro 放到一个文件里，就可以省掉若干 `#undef`：
+
+```cpp
+enum class DataType {
+#define X(name, type) name,
+#include "TypeTable.def"
+};
+
+// TypeTable.def
+X(I32, int32_t)
+X(I64, int64_t)
+X(F32, float)
+X(F64, double)
+#undef X
 ```
 
 如果有类似需求，最好可以用反射或反射库，因为代码生成的可读性是很糟糕的。
