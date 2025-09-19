@@ -1,14 +1,14 @@
 ---
 features:
 - details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
-  link: 2025/09/14
+  link: 2025/09/15
   title: 每日推送
 - details: 精选一些有意思的话题
   link: https://www.zhihu.com/column/c_1846629212653506560
   title: 每月精选
 hero:
   actions:
-  - link: 2025/09/14
+  - link: 2025/09/15
     text: 开始
     theme: brand
   - link: about
