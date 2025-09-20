@@ -14,7 +14,7 @@ export default async () => {
     copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
   });
 
-  let posts = await createContentLoader(['*.md', '*/*.md'], {
+  let posts = await createContentLoader(['*.md', '*/*.md', '*/*/*.md'], {
     excerpt: true,
     render: true,
   }).load();
