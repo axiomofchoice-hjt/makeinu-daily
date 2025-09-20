@@ -19,6 +19,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/about' },
+      { text: 'Topic', link: '/topic/' },
       { text: 'Latest', link: `/${articles[articles.length - 1]}` }
     ],
 

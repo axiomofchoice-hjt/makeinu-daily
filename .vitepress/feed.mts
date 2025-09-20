@@ -14,11 +14,12 @@ export default async () => {
     copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
   });
 
-  const posts = await createContentLoader('*/*/*.md', {
+  let posts = await createContentLoader(['*.md', '*/*.md'], {
     excerpt: true,
     render: true,
   }).load();
 
+  posts = posts.filter(post => 'date' in post.frontmatter);
   posts.sort(
     (a, b) =>
       +new Date(b.frontmatter.date as string) -

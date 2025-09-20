@@ -6,6 +6,9 @@ features:
 - details: 精选一些有意思的话题
   link: https://www.zhihu.com/column/c_1846629212653506560
   title: 每月精选
+- details: 有深度的知识合集
+  link: /topic
+  title: 败犬专题
 hero:
   actions:
   - link: 2025/09/18
@@ -24,7 +27,7 @@ layout: home
 title: 败犬日报
 ---
 
-## 欢迎来到败犬日报
+## 欢迎光临败犬日报
 
 C++ 话题每日推送！
 
