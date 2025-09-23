@@ -107,8 +107,8 @@ GCC 14.2 编译参数 `-std=c++23 -march=x86-64 -mavx512f -O3`，这个生成的
 ## 4. 内存序先写后读的问题
 
 ```cpp
-atomic<int> done;
-atomic<int> waiting;
+std::atomic<int> done;
+std::atomic<int> waiting;
 
 void notify() {
     done = 1;
@@ -125,13 +125,11 @@ void wait() {
 }
 ```
 
-done, waiting 读的内存序是 acquire，写是 release。并发调用 notify 和 wait，为什么有可能出现 notify 立刻返回且 wait 陷入 sleep？
+假如 done, waiting 读的内存序是 acquire，写是 release。并发调用 notify 和 wait，为什么有可能出现 notify 立刻返回且 wait 陷入 sleep？
 
-因为内存序的定义是这样的。acquire 阻止之后的指令不能排到前面，release 阻止之前的指令不能排到后面。但是先写后读不同的变量（同一变量有保障），不能阻止它们的乱序成先读后写。
+因为内存序的定义是这样的。acquire 阻止之后的指令排到前面，release 阻止之前的指令排到后面。但是先写后读不同的变量（同一变量有保障），不会阻止它们的乱序成先读后写。
 
-所以这里需要 seqcst 内存序。
-
-也可以用 std::atomic_thread_fence。
+所以这里需要 seqcst 内存序，也可以用 std::atomic_thread_fence。
 
 ## 5. 标记访问某个变量时必须持有某个锁
 
