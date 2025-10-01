@@ -1,6 +1,8 @@
 ---
 date: 2025-09-01
-next: false
+next:
+  link: /2025/09
+  text: 败犬のC++每月精选 2025-09
 prev:
   link: /2025/07
   text: 败犬のC++每月精选 2025-07
