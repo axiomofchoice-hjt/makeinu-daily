@@ -7,7 +7,7 @@ root = Path(__file__).parent.parent / "src"
 files = []
 for file in root.rglob("index.md"):
     # 只处理月报，排除主页 index.md
-    if file.parent.name != "src":
+    if file.parent.name not in ["src", "topic"]:
         files.append(str(file).replace("\\", "/"))
 
 
