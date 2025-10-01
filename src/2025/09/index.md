@@ -33,7 +33,7 @@ int main() {
 }
 ```
 
-std::accumulate 返回值的类型是那个初始值决定的，所以希望得到 double 的时候传了 0 就会寄。
+std::accumulate 返回值的类型是由初始值决定的，所以希望得到 double 的时候传了 0 就会寄。
 
 ranges::fold_left 就很正确，它的返回值类型是 auto。都是左折叠，所以 std::accumulate 算设计失误。
 
