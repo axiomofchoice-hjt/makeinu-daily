@@ -35,7 +35,7 @@ C++ 话题每日推送！
 
 每日推送：[RSS](https://makeinu-daily.pages.dev/feed.rss)
 
-每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)，[微信公众号](https://makeinu-daily.pages.dev/img/wechat.png)
+每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)
 
 ## 互动环节
 

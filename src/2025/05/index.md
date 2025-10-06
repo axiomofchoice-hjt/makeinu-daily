@@ -230,4 +230,4 @@ delete this 之后不做任何跟 this 相关的事就没事，不过一般都�
 
 都看到这了，来关注一下败犬日报吧！
 
-[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [微信公众号](https://makeinu-daily.pages.dev/img/wechat.png) | [RSS](https://makeinu-daily.pages.dev/feed.rss)
+[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [RSS](https://makeinu-daily.pages.dev/feed.rss)
