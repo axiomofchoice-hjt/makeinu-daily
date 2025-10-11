@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'vitepress';
 
 function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: string, collapsed: boolean) {
-  link += (link.length ? '/' : '') + article[0];
+  link += "/" + article[0];
   if (article.length > 1) {
     const text = article[0];
     let item = sidebar.find((item) => item.text === text);
@@ -10,18 +10,25 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
       sidebar.push(item);
     }
     if (article.length == 2 && article[1] == 'index') {
+      console.log(link);
       item.link = link;
     }
-    if (item.items === undefined) { return; } // make language server happy
+    if (item.items === undefined) { return; }  // make language server happy
     item.collapsed = collapsed;
     recurse(item.items, article.slice(1), link, collapsed);
   } else {
-    if (link.startsWith('topic/')) {
-      sidebar.push({ text: article[0], link });
+    if (link.startsWith('/topic/')) {
+      sidebar.push({ text: article[0], link, });
     } else if (link.endsWith('/index')) {
-      sidebar.push({ text: "每月精选", link });
+      sidebar.push({
+        text: "每月精选",
+        link: link.replace('/index', '/'),  // "/YYYY/MM/index" 变成 "/YYYY/MM/"，可以匹配到对应的侧边栏高亮
+      });
     } else {
-      sidebar.push({ text: link.replaceAll('/', '-'), link });
+      sidebar.push({
+        text: link.replace('/', '').replaceAll('/', '-'),  // 移除开头的斜杠，剩下的斜杠替换成短横线
+        link,
+      });
     }
   }
 }
