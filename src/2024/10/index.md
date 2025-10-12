@@ -92,6 +92,35 @@ int main() {
 }
 ```
 
+更进一步，想要消除 function 分配堆内存开销，以及 C 函数内也需要上下文，示例如下：
+
+```cpp
+#include <iostream>
+
+// C 接口，参数为回调函数和上下文
+extern "C" void c_world(void (*func)(void*, void*), void* context) {
+    const char* msg = "world";
+    func(&msg, context);
+}
+
+// 适配 C 接口，允许传入 C++ 仿函数
+template <typename Func>
+void invoke_c_style(void (*c_func)(void (*)(void*, void*), void*), Func f) {
+    auto callback = [](void* data, void* context) {
+        auto& func = *static_cast<Func*>(context);
+        func(data);
+    };
+    c_func(callback, &f);
+}
+
+int main() {
+    std::string message = "Hello, ";
+    invoke_c_style(c_world, [&](void* c_msg) {
+        std::cout << message << *static_cast<const char**>(c_msg) << "!\n";
+    });
+}
+```
+
 ## 5. 为什么以前的人不注重缓存
 
 因为那会确实差距不算大吧，而且还有各种 cache line 不一样所以考虑 cache oblivious 的情况。
