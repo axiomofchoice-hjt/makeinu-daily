@@ -35,7 +35,19 @@ export default defineConfig({
     footer: {
       message: 'Powered by <a href="https://vitepress.dev/">VitePress</a>. Released under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> License.',
       copyright: 'Copyright © 2024-present <a href="https://github.com/axiomofchoice-hjt">Axiomofchoice-hjt</a>'
-    }
+    },
+    outline: {
+      label: '页面导航'
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
   },
   markdown: {
     lineNumbers: true,
