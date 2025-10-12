@@ -1,24 +1,33 @@
 import { DefaultTheme } from 'vitepress';
 
+function toCapitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
+function isNumberStr(str: string) {
+  return /^\d+$/.test(str);
+}
+
 function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: string) {
   link += "/" + article[0];
   if (article.length > 1) {
-    const text = article[0];
+    const text = toCapitalize(article[0]);
     let item = sidebar.find((item) => item.text === text);
     if (item === undefined) {
       item = { text, items: [] };
       sidebar.push(item);
     }
     if (article.length == 2 && article[1] == 'index') {
-      item.link = link;
+      item.link = link + "/";
     }
     if (item.items === undefined) { return; }  // make language server happy
     item.collapsed = true;  // 默认折叠
     recurse(item.items, article.slice(1), link);
   } else {
     if (link.startsWith('/topic/')) {
+      if (link.endsWith('/index')) { return; }
       sidebar.push({
-        text: article[0],
+        text: toCapitalize(article[0]),
         link: link.replace('/index', '/'),  // "/topic/index" 变成 "/topic/"，可以匹配到对应的侧边栏高亮
       });
     } else if (link.endsWith('/index')) {
@@ -41,7 +50,7 @@ export default (articles: string[]) => {
     recurse(sidebar, article.split("/"), '');
   });
   sidebar.forEach(item => {
-    if (item.text != 'topic') { item.collapsed = undefined; }
+    if (isNumberStr(item.text as string)) { item.collapsed = undefined; }
   });
   return sidebar;
 };
