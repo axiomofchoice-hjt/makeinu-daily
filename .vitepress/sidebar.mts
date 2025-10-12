@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'vitepress';
 
-function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: string, collapsed: boolean) {
+function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: string) {
   link += "/" + article[0];
   if (article.length > 1) {
     const text = article[0];
@@ -10,15 +10,18 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
       sidebar.push(item);
     }
     if (article.length == 2 && article[1] == 'index') {
-      console.log(link);
       item.link = link;
     }
     if (item.items === undefined) { return; }  // make language server happy
-    item.collapsed = collapsed;
-    recurse(item.items, article.slice(1), link, collapsed);
+    item.collapsed = true;  // 默认折叠
+    recurse(item.items, article.slice(1), link);
   } else {
     if (link.startsWith('/topic/')) {
-      sidebar.push({ text: article[0], link, });
+      console.log(link)
+      sidebar.push({
+        text: article[0],
+        link: link.replace('/index', '/'),  // "/topic/index" 变成 "/topic/"，可以匹配到对应的侧边栏高亮
+      });
     } else if (link.endsWith('/index')) {
       sidebar.push({
         text: "每月精选",
@@ -36,7 +39,7 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
 export default (articles: string[]) => {
   let sidebar: DefaultTheme.SidebarItem[] = [];
   articles.forEach(article => {
-    recurse(sidebar, article.split("/"), '', article !== articles[articles.length - 1]);
+    recurse(sidebar, article.split("/"), '');
   });
   sidebar.forEach(item => {
     if (item.text != 'topic') { item.collapsed = undefined; }
