@@ -17,7 +17,6 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
     recurse(item.items, article.slice(1), link);
   } else {
     if (link.startsWith('/topic/')) {
-      console.log(link)
       sidebar.push({
         text: article[0],
         link: link.replace('/index', '/'),  // "/topic/index" 变成 "/topic/"，可以匹配到对应的侧边栏高亮

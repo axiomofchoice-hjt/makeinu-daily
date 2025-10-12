@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { EnhanceAppContext, useData, useRoute } from 'vitepress';
 import { toRefs } from "vue";
+import Layout from './Layout.vue';
 
 export default {
   ...DefaultTheme,
@@ -39,4 +40,5 @@ export default {
       true
     );
   },
+  Layout,
 };
