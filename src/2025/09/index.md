@@ -87,7 +87,7 @@ void foo(std::unordered_map<int*, int, MyTransparentHash, std::equal_to<>>& map,
 
 ## 4. 怎么搞出 sizeof 是 0 的类型
 
-C++ 不存在这个东西。标准不允许两个对象地址相同，如果 `sizeof(T)` 是 0，定义数组 `T a[2];` 就会有 `a[0] a[1]` 的地址相同，违背了要求。
+C++ 不存在这个东西。标准不允许两个对象地址相同（更新：是两个同类型的独立对象），如果 `sizeof(T)` 是 0，定义数组 `T a[2];` 就会有 `a[0] a[1]` 的地址相同，违背了要求。
 
 ```cpp
 #include <iostream>
