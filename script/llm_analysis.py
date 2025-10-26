@@ -18,6 +18,7 @@ def process_file(file: Path):
     if "description" in header and "__tags__" in header:
         return
 
+    print(f"Analyzing {file}")
     chat.clear()
     result = chat.call(prompt + "\n" + text)
     result = result.strip()
@@ -31,8 +32,7 @@ def process_file(file: Path):
     header["description"] = result["description"]
     header["__tags__"] = result["__tags__"]
     write_markdown_file(file.as_posix(), (header, text))
-    print(f"Processed {file}")
-    exit(0)
+    print(f"Finished")
 
 
 for path, dirs, files in Path.walk(root / "src"):
