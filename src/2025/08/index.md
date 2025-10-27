@@ -7,6 +7,115 @@ prev:
   link: /2025/07
   text: 败犬のC++每月精选 2025-07
 title: 败犬のC++每月精选 2025-08
+description: 本期日报包含 C++ 相关的多个话题，涵盖语言特性、性能优化、编译构建和工程实践等内容
+__tags__:
+- title: '## 1. 结构化绑定的变量不触发 NRVO'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 内存管理
+  - 进阶知识
+  explanation: 讨论结构化绑定与 NRVO 的关系，解释为什么结构化绑定会阻止返回值优化，需要显式使用 std::move。
+- title: '## 2. bool 变量分发到 bool 模板实参'
+  score: 7/10
+  tags:
+  - C++
+  - 泛型编程
+  - 编译期
+  - 进阶知识
+  explanation: 介绍如何将运行时 bool 值转换为编译期模板参数，展示了宏和模板两种实现方式。
+- title: '## 3. 临时对象是纯右值'
+  score: 6/10
+  tags:
+  - C++
+  - 语法特性
+  - 基础知识
+  explanation: 说明临时对象的右值性质，通过赋值运算符的引用限定符示例展示语言细节。
+- title: '## 4. asan 用于下毒的代码'
+  score: 7/10
+  tags:
+  - C++
+  - 内存管理
+  - 编译构建和调试
+  - 进阶知识
+  explanation: 展示如何使用 ASan 手动下毒内存区域来检测逻辑越界，适用于内存池等场景。
+- title: '## 5. 数学函数（例如 std::sqrt）不是 constexpr'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 标准库特性
+  - 进阶知识
+  explanation: 解释数学函数不能 constexpr 的历史原因（舍入模式、errno），介绍 C++26 的改进方案。
+- title: '## 6. 怎么让变量在不同编译期条件下绑定不同类型的变量'
+  score: 7/10
+  tags:
+  - C++
+  - 泛型编程
+  - 编译期
+  - 进阶知识
+  explanation: 展示使用 lambda 和 constexpr if 实现条件类型绑定的技巧，注意返回值类型推导的限制。
+- title: '## 7. `buildin_ctz(0)` 是未定义行为'
+  score: 8/10
+  tags:
+  - C++
+  - 硬件相关
+  - 标准库特性
+  - 进阶知识
+  explanation: 解释 builtin_ctz(0) 的未定义行为原因，对比 std::countr_zero 的安全实现和汇编差异。
+- title: '## 8. C++ vector 的 push_back 扩容机制为什么不考虑在尾元素后面的空间申请内存'
+  score: 8/10
+  tags:
+  - C++
+  - 内存管理
+  - STL
+  - 进阶知识
+  explanation: 分析 vector 扩容不使用 realloc 的原因，涉及 trivially copyable 限制和 relocate 语义。
+- title: '## 9. 模板模板参数的一个例子：Allocator rebind'
+  score: 9/10
+  tags:
+  - C++
+  - 泛型编程
+  - 内存管理
+  - STL
+  - 专家知识
+  explanation: 介绍模板模板参数在 STL allocator rebind 机制中的应用，属于高级模板技巧。
+- title: '## 10. 父类 16 字节，子类有成员变量还是 16 字节'
+  score: 7/10
+  tags:
+  - C++
+  - 内存管理
+  - 面向对象编程
+  - 进阶知识
+  explanation: 展示子类如何利用父类尾部 padding 优化内存布局，涉及字节对齐和继承内存布局。
+- title: '## 11. constexpr std::source_location::current 丢失模板信息'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 标准库特性
+  - 编译期
+  - 专家知识
+  explanation: 分析 constexpr source_location 在模板中丢失信息的原因，涉及求值时机和模板实例化。
+- title: '## 12. Analyzing Computer System Performance with Perl PDQ（书）'
+  score: 7/10
+  tags:
+  - 性能优化
+  - 工程实践
+  - 基础知识
+  - 其他
+  explanation: 介绍计算机系统性能分析书籍内容，涵盖负载评估、排队论、可靠性模型等主题。
+- title: '## 13. 一些文章'
+  score: 6/10
+  tags:
+  - C++
+  - 工程实践
+  - 性能优化
+  - 内存管理
+  - 基础知识
+  - 其他
+  explanation: 收集多篇相关文章链接，涵盖简历写作、C++ 周刊、SIMD、内存池等多样化主题。
 ---
 
 ![img](/img/2025-08-index.png)

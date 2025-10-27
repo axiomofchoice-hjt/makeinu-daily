@@ -7,6 +7,104 @@ prev:
   link: /2025/02
   text: 败犬のC++每月精选 2025-02
 title: 败犬のC++每月精选 2025-03
+description: 本期日报包含 C++ 话题，涵盖语言特性、标准库、性能优化、内存管理、编译构建等多个方面
+__tags__:
+- title: '## 1. C++ 跳出双重循环或跳出 if 的方法'
+  score: 7/10
+  tags:
+  - C++
+  - 工程实践
+  - 基础知识
+  - 需改进
+  explanation: 讨论 C++ 中跳出多重循环的方法，提到 lambda 和 goto 的优缺点，但内容不够全面，缺少实际代码示例和性能对比，需要改进。
+- title: '## 2. 异常会导致二进制膨胀'
+  score: 8/10
+  tags:
+  - C++
+  - 性能优化
+  - 错误处理
+  - 工程实践
+  - 进阶知识
+  explanation: 分析异常机制对二进制体积的影响，对比 LLVM 禁用异常的做法和替代方案，属于性能优化和工程实践的进阶知识。
+- title: '## 3. 静态链接符号未找到，但目标文件有这个符号'
+  score: 8/10
+  tags:
+  - C++
+  - 编译构建和调试
+  - 工程实践
+  - 进阶知识
+  explanation: 解释静态链接时符号查找问题，分析链接顺序的影响，提供 --whole-archive 和 --start-group 的解决方案，属于编译构建的进阶知识。
+- title: '## 4. C 的资源释放问题'
+  score: 7/10
+  tags:
+  - C++
+  - 内存管理
+  - 工程实践
+  - 基础知识
+  explanation: 讨论 C 语言中资源释放的复杂性，对比 goto 和 attribute cleanup 的解决方案，涉及内存管理和工程实践的基础知识。
+- title: '## 5. `unordered_map<string, int>` 不能查找 string_view'
+  score: 9/10
+  tags:
+  - C++
+  - 标准库特性
+  - STL
+  - 语法特性
+  - 进阶知识
+  explanation: 分析 unordered_map 查找 string_view 的问题，解释透明 Hash 和 KeyEqual 的要求，提供自定义
+    Hash 的解决方案，属于标准库特性的进阶知识。
+- title: '## 6. 如何用可变参数给数组赋值'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 编译期
+  - 泛型编程
+  - 进阶知识
+  explanation: 展示使用可变参数模板和 integer_sequence 实现数组赋值的方法，涉及编译期编程和泛型编程的进阶知识。
+- title: '## 7. 引用的非空 hint'
+  score: 8/10
+  tags:
+  - C++
+  - 性能优化
+  - 语法特性
+  - 进阶知识
+  explanation: 分析引用非空假设对编译器优化的影响，举例说明成员函数 this 指针和 memcpy 的非空假设，属于性能优化的进阶知识。
+- title: '## 8. 三路运算符 `<=>` 和强序弱序偏序'
+  score: 9/10
+  tags:
+  - C++
+  - 语法特性
+  - 标准库特性
+  - 基础知识
+  explanation: 详细解释三路运算符和比较类别（强序、弱序、偏序），分析其解决的问题和性能考虑，属于语法特性的基础知识。
+- title: '## 9. 重载决议的一个例子'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 函数
+  - 泛型编程
+  - 进阶知识
+  explanation: 通过具体示例分析重载决议规则，讨论完美匹配和 const 限定符的影响，提供实践中的解决方案，属于函数重载的进阶知识。
+- title: '## 10. deducing this + CRTP 的隐藏坑'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 面向对象编程
+  - 泛型编程
+  - 专家知识
+  explanation: 揭示 deducing this 与 CRTP 结合时的类型推导问题，分析继承链中的 self 类型推导，属于面向对象编程的专家知识。
+- title: '## 11. `vector::push_back` 如果有扩容，为什么先构造传入的元素而非原有元素'
+  score: 9/10
+  tags:
+  - C++
+  - STL
+  - 标准库特性
+  - 内存管理
+  - 进阶知识
+  explanation: 分析 vector push_back 扩容时的元素构造顺序，解释标准未规定但实现一致性的要求，涉及自引用场景的安全性考虑，属于 STL
+    的进阶知识。
 ---
 
 ![img](/img/2025-03-index.png)

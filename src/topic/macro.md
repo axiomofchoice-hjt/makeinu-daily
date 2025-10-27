@@ -3,6 +3,97 @@ date: 2025-09-18
 next: false
 prev: false
 title: 败犬のC++专题 宏魔法篇
+description: 本期日报包含 C++ 宏编程的多个话题，涵盖宏展开规则、实用技巧和高级应用
+__tags__:
+- title: '## 1. 前置知识'
+  score: 7/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 基础知识
+  explanation: 介绍宏编程的基础知识，包括宏定义、条件编译、预定义宏和运算符，属于基础知识。
+- title: '## 2. 宏展开规则'
+  score: 8/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 详细讲解宏嵌套展开的三条规则，引用 cppreference 验证，属于进阶知识。
+- title: '## 3. 宏展开规则举例：行号 `__LINE__` 的字符串形式'
+  score: 8/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 通过行号字符串化的例子演示宏展开规则的实际应用，属于进阶知识。
+- title: '## 4. 宏展开规则举例：变量名包含 `__LINE__` 的宏'
+  score: 8/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 展示如何通过两层宏实现变量名包含行号，进一步说明宏展开规则，属于进阶知识。
+- title: '## 5. 使用宏时，参数里有逗号'
+  score: 7/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 解决宏参数包含逗号的问题，提到小括号和变长参数两种方案，属于进阶知识。
+- title: '## 6. 宏魔法之 for'
+  score: 7/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 实现类似 for 循环的宏展开，展示宏的代码生成能力，属于进阶知识。
+- title: '## 7. include 的参数可以是宏'
+  score: 6/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 基础知识
+  explanation: 说明 include 指令可以使用宏参数，属于基础知识。
+- title: '## 8. 下划线占位符'
+  score: 7/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 介绍 C++26 下划线占位符特性，并用宏模拟实现，属于进阶知识。
+- title: '## 9. x-macro'
+  score: 9/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 工程实践
+  - 专家知识
+  explanation: 详细讲解 x-macro 代码生成技术，包括 enum to string 等实用场景，属于专家知识。
+- title: '## 10. 根据参数个数的分发'
+  score: 8/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 进阶知识
+  explanation: 展示如何通过宏实现根据参数个数调用不同函数，引用 Linux 内核代码，属于进阶知识。
+- title: '## 11. C 语言允许调试的泛型编程'
+  score: 7/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 泛型编程
+  - 工程实践
+  - 进阶知识
+  explanation: 介绍通过头文件包含宏实现可调试的 C 语言泛型编程，属于进阶知识。
+- title: '## 12. 写在最后'
+  score: 6/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 工程实践
+  - 基础知识
+  - 内容较主观
+  explanation: 总结宏编程的局限性，强调优先使用模板的原则，包含主观建议，属于基础知识。
 ---
 
 ![img](/img/topic-macro-cover.png)

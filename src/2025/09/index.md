@@ -5,6 +5,102 @@ prev:
   link: /2025/08
   text: 败犬のC++每月精选 2025-08
 title: 败犬のC++每月精选 2025-09
+description: 本期日报包含 C++ 哈希表设计、标准库特性、语言特性、编程实践等多个话题
+__tags__:
+- title: '## 1. 哈希表怎么设计'
+  score: 8/10
+  tags:
+  - C++
+  - STL
+  - 性能优化
+  - 工程实践
+  - 进阶知识
+  explanation: 讨论哈希表设计和高性能实现，对比 C++ unordered_map 与 ClickHouse 的实现，涉及性能优化和工程实践，属于进阶知识。
+- title: '## 2. std::accumulate 的类型设计失误'
+  score: 7/10
+  tags:
+  - C++
+  - 标准库特性
+  - STL
+  - 基础知识
+  - 需改进
+  explanation: 指出 std::accumulate 因返回值类型由初始值决定而易出错，对比 ranges::fold_left 的设计，属于基础知识。需改进：文章可更详细说明解决方案。
+- title: '## 3. `std::unordered_map<int*, int>` 不能传常量指针'
+  score: 6/10
+  tags:
+  - C++
+  - STL
+  - 标准库特性
+  - 语法特性
+  - 进阶知识
+  explanation: 解决 std::unordered_map 使用常量指针的问题，介绍 const_cast 和透明查找方法，涉及语法特性和标准库特性，属于进阶知识。
+- title: '## 4. 怎么搞出 sizeof 是 0 的类型'
+  score: 5/10
+  tags:
+  - C++
+  - 语法特性
+  - 内存管理
+  - 基础知识
+  - 需改进
+  explanation: 探讨 C++ 中 sizeof 为 0 的类型，指出标准不允许且依赖编译器扩展，属于基础知识。需改进：文章未充分解释标准要求和实际限制。
+- title: '## 5. Concept-Model Idiom 非侵入式多态'
+  score: 7/10
+  tags:
+  - C++
+  - 泛型编程
+  - 工程实践
+  - 进阶知识
+  explanation: 介绍 Concept-Model Idiom 实现非侵入式多态，推荐使用 proxy 库简化代码，涉及泛型编程和工程实践，属于进阶知识。
+- title: '## 6. `[[no_unique_address]]` C++20'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 内存管理
+  - 进阶知识
+  explanation: 讲解 C++20 的 [[no_unique_address]] 特性，允许成员变量地址重叠，优化空类存储，涉及内存管理和语法特性，属于进阶知识。
+- title: '## 7. 锐评 `if (flag) { res = 0.0; }` 和 `res = static_cast<double>(!flag)
+    * res;`'
+  score: 9/10
+  tags:
+  - C++
+  - 工程实践
+  - 性能优化
+  - 基础知识
+  - 内容较主观
+  explanation: 对比两种代码写法，强调可读性优先，讨论分支和乘法性能，引用 Donald Knuth 名言，涉及工程实践和性能优化，属于基础知识。内容较主观：包含作者个人观点。
+- title: '## 8. 参数包后面塞默认实参的问题 - 推导指引'
+  score: 7/10
+  tags:
+  - C++
+  - 语法特性
+  - 标准库特性
+  - 进阶知识
+  explanation: 解决参数包与默认实参（如 source_location）结合的问题，使用推导指引实现，涉及语法特性和标准库特性，属于进阶知识。
+- title: '## 9. 能不能限制一个类型只能创建临时对象，禁止具名'
+  score: 6/10
+  tags:
+  - C++
+  - 语法特性
+  - 内存管理
+  - 专家知识
+  - 需改进
+  explanation: 探讨限制类型只能创建临时对象的方法，指出常见错误和形参生命周期方案，涉及内存管理和语法特性，属于专家知识。需改进：方案依赖实现定义行为，不够稳健。
+- title: '## 10. 为什么有符号整数溢出是未定义行为'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 基础知识
+  explanation: 解释有符号整数溢出为 UB 的原因，包括编译器优化和硬件差异，引用外部文章补充，涉及语法特性，属于基础知识。
+- title: '## 11. 一些文章'
+  score: 7/10
+  tags:
+  - C++
+  - 其他
+  - 基础知识
+  - 内容较主观
+  explanation: 推荐多篇外部文章，涵盖提问技巧、gcc patch、AI 新闻等，主题多样，属于基础知识。内容较主观：选择文章体现作者偏好。
 ---
 
 ![img](/img/2025-09-index.png)

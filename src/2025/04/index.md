@@ -7,6 +7,95 @@ prev:
   link: /2025/03
   text: 败犬のC++每月精选 2025-03
 title: 败犬のC++每月精选 2025-04
+description: 本期日报包含多个 C++ 话题，涉及线程安全随机数、内存布局、性能优化、模板编程、智能指针、容器使用、初始化方式等
+__tags__:
+- title: '## 1. 线程安全随机数和 thread_local magic static'
+  score: 8/10
+  tags:
+  - C++
+  - 并发编程
+  - 标准库特性
+  - 进阶知识
+  explanation: 介绍使用 thread_local 实现线程安全的随机数生成器，避免 magic static 的锁开销，属于并发编程和标准库特性的进阶知识。
+- title: '## 2. 继承中的 public private 影响内存布局'
+  score: 7/10
+  tags:
+  - C++
+  - 内存管理
+  - 面向对象编程
+  - ABI
+  - 专家知识
+  - 需改进
+  explanation: 讨论继承中访问修饰符对内存布局的影响，涉及 Itanium ABI 和标准布局规则，属于专家知识。需改进：文章对 GCC/Clang
+    和 MSVC 行为差异的解释不够全面，缺少具体标准引用。
+- title: '## 3. std::sort 和 qsort 的性能对比'
+  score: 6/10
+  tags:
+  - C++
+  - STL
+  - 算法
+  - 性能优化
+  - 基础知识
+  explanation: 对比 std::sort 和 qsort 的性能差异，强调类型信息对性能的影响，属于 STL 算法和性能优化的基础知识。
+- title: '## 4. 用 constexpr if 实现 std::condition'
+  score: 8/10
+  tags:
+  - C++
+  - 编译期
+  - 泛型编程
+  - 元编程
+  - 进阶知识
+  explanation: 展示使用 constexpr if 实现条件类型选择，涉及编译期编程和泛型编程技巧，属于进阶知识。
+- title: '## 5. shared_ptr 传给函数，参数定义为裸指针是否合理'
+  score: 8/10
+  tags:
+  - C++
+  - 内存管理
+  - 工程实践
+  - 进阶知识
+  - 内容较主观
+  explanation: 讨论 shared_ptr 传参的最佳实践，分析裸指针和智能指针的语义差异，属于内存管理和工程实践的进阶知识，内容较主观。
+- title: '## 6. `priority_queue<unique_ptr<T>>` push 进去就出不来了'
+  score: 7/10
+  tags:
+  - C++
+  - STL
+  - 内存管理
+  - 工程实践
+  - 进阶知识
+  explanation: 分析 priority_queue 与 unique_ptr 的组合问题，指出标准库设计限制并提供替代方案，属于 STL 和内存管理的进阶知识。
+- title: '## 7. 宇宙射线导致内存 bit 翻转'
+  score: 5/10
+  tags:
+  - 硬件相关
+  - 其他
+  - 基础知识
+  explanation: 介绍宇宙射线导致内存错误的硬件现象，属于硬件相关的基础知识，与 C++ 无直接关联。
+- title: '## 8. C++ 初始化方式'
+  score: 7/10
+  tags:
+  - C++
+  - 语法特性
+  - 工程实践
+  - 基础知识
+  explanation: 总结 C++ 初始化规则，推荐使用 {} 初始化的工程实践，属于语法特性和工程实践的基础知识。
+- title: '## 9. 手动实现 typeid'
+  score: 8/10
+  tags:
+  - C++
+  - 元编程
+  - 面向对象编程
+  - 泛型编程
+  - 专家知识
+  explanation: 展示手动实现 typeid 功能以替代 RTTI，涉及元编程、CRTP 和虚函数技巧，属于专家知识。
+- title: '## 10. 同一个 shared_ptr 的复制移动 reset 等操作不是线程安全的'
+  score: 8/10
+  tags:
+  - C++
+  - 内存管理
+  - 并发编程
+  - 进阶知识
+  explanation: 澄清 shared_ptr 线程安全性的常见误解，强调同一 shared_ptr 实例操作的并发风险，属于内存管理和并发编程的进阶知识。
 ---
 
 ![img](/img/2025-04-index.png)

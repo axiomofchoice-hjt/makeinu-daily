@@ -7,6 +7,117 @@ prev:
   link: /2025/06
   text: 败犬のC++每月精选 2025-06
 title: 败犬のC++每月精选 2025-07
+description: 本期日报包含 C++ 语言相关的多个话题，涉及语法特性、标准库、编译期行为、内存管理、面向对象编程等，同时收录了一些编程实践和文章推荐。
+__tags__:
+- title: '## 1. switch enum，每个枚举值都有 return 但是 MSVC 报 not all control paths return
+    a value'
+  score: 7/10
+  tags:
+  - C++
+  - 语法特性
+  - 基础知识
+  - 需改进
+  explanation: 讨论 switch 语句中枚举值处理的问题，涉及 std::unreachable 和枚举值的潜在范围，存在事实不全面的问题，需要补充完整解决方案。
+- title: '## 2. C++ 和命名参数'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 工程实践
+  - 进阶知识
+  explanation: 探讨 C++ 中命名参数的实现方案，包括指派初始化和相关提案，涉及语法特性和工程实践，属于进阶知识。
+- title: '## 3. 状态管理，用全局变量实现容易堆屎山'
+  score: 7/10
+  tags:
+  - C++
+  - 工程实践
+  - 内存管理
+  - 基础知识
+  explanation: 讨论状态管理的实践，推荐使用 context 参数而非全局变量，涉及内存管理和工程实践，属于基础知识。
+- title: '## 4. 变量名包含 `__LINE__` 的宏'
+  score: 6/10
+  tags:
+  - C++
+  - 预处理和宏
+  - 基础知识
+  explanation: 介绍宏拼接 `__LINE__` 的正确方法，涉及预处理和宏，属于基础知识。
+- title: '## 5. 为什么虚表里的函数从第 2 项开始'
+  score: 8/10
+  tags:
+  - C++
+  - 面向对象编程
+  - ABI
+  - 进阶知识
+  explanation: 解释虚函数表布局和 RTTI 的关系，涉及面向对象编程和 ABI，属于进阶知识。
+- title: '## 6. const_cast 什么场景下必须用'
+  score: 7/10
+  tags:
+  - C++
+  - 语法特性
+  - 类型
+  - 基础知识
+  explanation: 讨论 const_cast 的适用场景，包括接口兼容性和迭代器处理，涉及类型转换和语法特性，属于基础知识。
+- title: '## 7. clang constexpr 过早实例化的问题'
+  score: 7/10
+  tags:
+  - C++
+  - 编译期
+  - 语法特性
+  - 专家知识
+  - 需改进
+  explanation: 分析 clang 在 constexpr 上下文中的模板实例化问题，涉及编译期行为和语法特性，属于专家知识，存在事实不全面的问题。
+- title: '## 8. GCC/Clang 模板语境 lambda 是 dependent expression'
+  score: 6/10
+  tags:
+  - C++
+  - 语法特性
+  - 泛型编程
+  - 专家知识
+  explanation: 讨论模板语境中 lambda 表达式被视为 dependent expression 的问题，涉及泛型编程和语法特性，属于专家知识。
+- title: '## 9. 指针 `==` 在菱形继承下不能判断是同一对象'
+  score: 7/10
+  tags:
+  - C++
+  - 面向对象编程
+  - 类型
+  - 进阶知识
+  explanation: 解释菱形继承中指针比较的歧义问题，涉及面向对象编程和类型系统，属于进阶知识。
+- title: '## 10. 死代码需要清理吗'
+  score: 6/10
+  tags:
+  - C++
+  - 工程实践
+  - 基础知识
+  explanation: 讨论死代码清理的必要性，涉及工程实践，属于基础知识。
+- title: '## 11. `std::string::c_str()` 的值移动后失效'
+  score: 8/10
+  tags:
+  - C++
+  - 内存管理
+  - 标准库特性
+  - 进阶知识
+  explanation: 分析 std::string 移动后 c_str() 失效的问题，涉及内存管理和标准库特性，属于进阶知识。
+- title: '## 12. 为什么没有 is_specialization 的模板工具'
+  score: 7/10
+  tags:
+  - C++
+  - 泛型编程
+  - 元编程
+  - 专家知识
+  explanation: 探讨 C++ 中缺少 is_specialization 模板工具的原因，涉及泛型编程和元编程，属于专家知识。
+- title: '## 13. 群友的名言警句'
+  score: 6/10
+  tags:
+  - 工程实践
+  - 其他
+  explanation: 收录编程实践相关的名言警句，涉及工程实践，属于其他话题。
+- title: '## 14. 一些文章'
+  score: 7/10
+  tags:
+  - 工程实践
+  - 性能优化
+  - 其他
+  explanation: 推荐多篇编程相关文章，涉及工程实践和性能优化，属于其他话题。
 ---
 
 ![img](/img/2025-07-index.png)

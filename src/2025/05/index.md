@@ -7,6 +7,103 @@ prev:
   link: /2025/04
   text: 败犬のC++每月精选 2025-04
 title: 败犬のC++每月精选 2025-05
+description: 本期日报包含 C++ 语言特性、标准库、模板编程、内存管理等多个话题，涵盖基础知识到专家知识
+__tags__:
+- title: '## 1. char8_t 与严格别名的问题'
+  score: 8/10
+  tags:
+  - C++
+  - 类型
+  - 内存管理
+  - 专家知识
+  - 需改进
+  explanation: 讨论 char8_t 与严格别名规则的关系，涉及性能优化和类型系统，属于专家知识。需改进：原文有事实错误需要修正。
+- title: '## 2. Clang 16 不支持 `constexpr std::string`，到了 17 才支持'
+  score: 7/10
+  tags:
+  - C++
+  - 标准库特性
+  - 编译期
+  - 编译构建和调试
+  - 进阶知识
+  explanation: 解释不同编译器对 constexpr std::string 的支持情况，涉及编译期计算和标准库实现，属于进阶知识。
+- title: '## 3. `std::decay` 和 `std::remove_cvref` 有什么区别'
+  score: 9/10
+  tags:
+  - C++
+  - 类型
+  - 泛型编程
+  - 标准库特性
+  - 基础知识
+  explanation: 比较两个类型转换特性的区别，涉及类型推导和泛型编程，属于基础知识。
+- title: '## 4. 模板编程和模板元编程'
+  score: 8/10
+  tags:
+  - C++
+  - 泛型编程
+  - 元编程
+  - 编译期
+  - 基础知识
+  explanation: 区分模板编程和模板元编程的概念，解释模板的发展历史，属于基础知识。
+- title: '## 5. `const T&` 返回函数中的不具名对象，能不能延长生命周期'
+  score: 8/10
+  tags:
+  - C++
+  - 内存管理
+  - 函数
+  - 基础知识
+  - 需改进
+  explanation: 讨论函数返回引用时的生命周期问题，涉及 RVO 和悬垂引用，属于基础知识。需改进：原文有错误表述需要修正。
+- title: '## 6. 判断一个类型的特定成员函数的返回值类型，但是没法构造这个类型'
+  score: 7/10
+  tags:
+  - C++
+  - 类型
+  - 泛型编程
+  - 编译期
+  - 进阶知识
+  explanation: 介绍使用 declval 和 requires 判断成员函数返回值类型的方法，涉及泛型编程，属于进阶知识。
+- title: '## 7. parameter 和 argument 的区别'
+  score: 6/10
+  tags:
+  - C++
+  - 基础知识
+  - 其他
+  - 内容较主观
+  explanation: 讨论编程术语 parameter 和 argument 的区别，涉及语言规范，属于基础知识，内容较主观。
+- title: '## 8. 代码鉴赏：文件拆成两半'
+  score: 5/10
+  tags:
+  - C++
+  - 工程实践
+  - 搞笑
+  - 基础知识
+  explanation: 展示并批评一种逆天的代码组织方式，涉及工程实践和代码风格，属于基础知识，包含搞笑元素。
+- title: '## 9. C++17 实现无参数的 lambda template'
+  score: 7/10
+  tags:
+  - C++
+  - 泛型编程
+  - 函数式编程
+  - 编译期
+  - 进阶知识
+  explanation: 介绍在 C++17 中模拟 lambda template 的方法，涉及泛型编程和函数式编程，属于进阶知识。
+- title: '## 10. delete this'
+  score: 8/10
+  tags:
+  - C++
+  - 内存管理
+  - 面向对象编程
+  - 进阶知识
+  explanation: 解释 delete this 语法的使用场景和注意事项，涉及内存管理和面向对象编程，属于进阶知识。
+- title: '## 11. 继承标准库的类是不是未定义行为'
+  score: 8/10
+  tags:
+  - C++
+  - 面向对象编程
+  - 标准库特性
+  - 基础知识
+  explanation: 澄清继承标准库类的合法性，列举实际应用场景，涉及面向对象编程，属于基础知识。
 ---
 
 ![img](/img/2025-05-index.png)
