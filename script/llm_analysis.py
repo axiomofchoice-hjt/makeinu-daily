@@ -3,6 +3,7 @@ import os
 from chat import Chat
 from markdown_file import read_markdown_file, write_markdown_file
 import json
+from articles import articles
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 assert api_key is not None, "Please set the DEEPSEEK_API_KEY environment variable."
@@ -34,9 +35,6 @@ def process_file(file: Path):
     write_markdown_file(file.as_posix(), (header, text))
     print(f"Finished")
 
-
-for path, dirs, files in Path.walk(root / "src"):
-    for file in files:
-        file = path / file
-        if file.suffix == ".md" and file.stem.isdigit():
-            process_file(file)
+for article_type, files in articles().items():
+    for article in files:
+        process_file(article)
