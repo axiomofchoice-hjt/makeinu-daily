@@ -248,9 +248,3 @@ Track Errors First <https://www.bugsink.com/blog/track-errors-first/>
 C++ 中文周刊 2025-06-22 第186期 <https://zhuanlan.zhihu.com/p/1920296120623564306>（有详细的 c++26 的新进展）
 
 Reflection for C++26!!! - YKIKO的文章 <https://zhuanlan.zhihu.com/p/1919923607997518115>
-
-***
-
-都看到这了，来关注一下败犬日报吧！
-
-[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [RSS](https://makeinu-daily.pages.dev/feed.rss)

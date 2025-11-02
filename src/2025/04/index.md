@@ -339,9 +339,3 @@ auto b = a;
 shared_ptr 的原子变量目的是保证不同 shared_ptr 的并发安全，重点是“不同”。
 
 同一个 shared_ptr 复制、移动、reset 等操作想要线程安全，只靠引用计数的几个原子变量是不行的，需要额外结构。这也是 `atomic<shared_ptr>` 做的事情。
-
-***
-
-都看到这里了，来关注一下败犬日报吧！
-
-[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [RSS](https://makeinu-daily.pages.dev/feed.rss)

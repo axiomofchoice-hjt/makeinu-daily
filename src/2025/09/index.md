@@ -339,9 +339,3 @@ C++ 关于 concept 与 type traits 的优劣是什么？<https://www.zhihu.com/q
 C++ 冰山图 <https://victorpoughon.github.io/cppiceberg/>
 
 认为AI是泡沫的人，需再次领教一下指数的威力 <https://mp.weixin.qq.com/s/TUu5axavU2IzBF8IEbvP_w>
-
-***
-
-都看到这了，来关注一下败犬日报吧！
-
-[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [RSS](https://makeinu-daily.pages.dev/feed.rss)

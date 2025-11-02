@@ -448,9 +448,3 @@ jemalloc 生平，原文 <https://jasone.github.io/2025/06/12/jemalloc-postmorte
 A Programmer's Reading List <https://www.piglei.com/articles/en-programmer-reading-list-part-one/>
 
 洞悉C++函数重载决议 <https://zhuanlan.zhihu.com/p/561977606>
-
-***
-
-都看到这了，来关注一下败犬日报吧！
-
-[主站](https://makeinu-daily.pages.dev/) | [知乎专栏](https://www.zhihu.com/column/c_1846629212653506560) | [RSS](https://makeinu-daily.pages.dev/feed.rss)
