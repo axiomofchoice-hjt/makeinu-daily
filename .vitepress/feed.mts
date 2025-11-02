@@ -38,7 +38,7 @@ export default async () => {
       link: `${host}${url}`,
       description: excerpt,
       content: html?.replaceAll(pattern, ''),
-      date: frontmatter.date,
+      date: new Date(frontmatter.date as string),
     });
   }
 
