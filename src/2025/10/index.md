@@ -1,5 +1,5 @@
 ---
-date: '2025-11-01'
+date: 2025/11/01
 title: 败犬のC++每月精选 2025-10
 next: false
 prev:

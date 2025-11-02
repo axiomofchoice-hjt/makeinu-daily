@@ -23,7 +23,7 @@ write_markdown_file(previous_file, header, content)
 
 # 创建 <root>/<current>.md
 header = {
-    "date": current.replace("/", "-"),
+    "date": current,
     "title": "败犬日报 " + current.replace("/", "-"),
     "next": False,
     "prev": {

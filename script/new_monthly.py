@@ -25,7 +25,7 @@ write_markdown_file(previous_file, header, content)
 
 # 创建 <root>/<today>.md
 header = {
-    "date": next.replace("/", "-") + "-01",
+    "date": next + "/01",
     "title": "败犬のC++每月精选 " + current.replace("/", "-"),
     "next": False,
     "prev": {
