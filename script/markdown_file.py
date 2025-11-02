@@ -1,8 +1,9 @@
 import yaml
 from typing import Tuple
+from pathlib import Path
 
 
-def read_markdown_file(file_path: str) -> Tuple[dict, str]:
+def read_markdown_file(file_path: str | Path) -> Tuple[dict, str]:
     """Reads a markdown file and returns its YAML header and content."""
     with open(file_path, "r", encoding="utf8") as f:
         lines = f.readlines()
@@ -18,20 +19,19 @@ def read_markdown_file(file_path: str) -> Tuple[dict, str]:
     return header, content
 
 
-def write_markdown_file(file_path: str, markdown: Tuple[dict, str]) -> None:
+def write_markdown_file(file_path: str | Path, header: dict, content: str) -> None:
     """Writes a markdown file with the given YAML header and content."""
-    header, content = markdown
     with open(file_path, "w", encoding="utf8") as f:
         f.write("---\n")
         str_header = yaml.dump(
-            header, 
+            header,
             allow_unicode=True,
             default_flow_style=False,
             sort_keys=False,  # 保持原始键顺序
-            Dumper=yaml.SafeDumper
+            Dumper=yaml.SafeDumper,
         )
         f.write(str_header)
-        if not str_header.endswith('\n'):
-            f.write('\n')
+        if not str_header.endswith("\n"):
+            f.write("\n")
         f.write("---\n")
         f.write(content)
