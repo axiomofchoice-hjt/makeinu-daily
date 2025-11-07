@@ -51,7 +51,7 @@ C++ 话题每日推送！
 
 1. [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 2. [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
-3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)、[Don't ask to ask, just ask](https://dontasktoask.com/)、[The XY Problem](https://xyproblem.info/)，
+3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)、[Don't ask to ask, just ask](https://dontasktoask.com/)、[The XY Problem](https://xyproblem.info/)
 
 <br/>
 
@@ -65,4 +65,4 @@ C++ 话题每日推送！
 
 LOGO 来源[狸花在画画](https://space.bilibili.com/244937198)，LOGO 角色《败犬女主太多了》里的八奈见杏菜。
 
-makeinu 負け犬，直译败犬（表示自嘲），不是败犬女主哦。其实我是想要让域名短一点。
+makeinu 負け犬，直译败犬（表示自嘲），不是败犬女主哦。
