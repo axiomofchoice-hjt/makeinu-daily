@@ -66,3 +66,5 @@ C++ 话题每日推送！
 LOGO 来源[狸花在画画](https://space.bilibili.com/244937198)，LOGO 角色《败犬女主太多了》里的八奈见杏菜。
 
 makeinu 負け犬，直译败犬（表示自嘲），不是败犬女主哦。
+
+![img](/img/2025-10-index.png)
