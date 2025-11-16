@@ -18,7 +18,7 @@ hero:
     text: 关于日报
     theme: alt
   image:
-    alt: 老八可爱
+    alt: 老八可爱捏
     dark: /favicon-dark.jpg
     light: /favicon.jpg
   name: 败犬日报
@@ -29,17 +29,13 @@ title: 败犬日报
 
 ## 欢迎光临败犬日报
 
-C++ 话题每日推送！
+C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/NCJmtSyaoq)对线或者直接[找我](https://qm.qq.com/q/o2qw5F5Gp4)。
 
 ## 订阅日报
 
 每日推送：[RSS](https://makeinu-daily.pages.dev/feed.rss)
 
-每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)
-
-## 互动环节
-
-任何建议可以发评论区或[进群](https://qm.qq.com/q/NCJmtSyaoq)对线！
+每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)（有人需要月报 RSS 吗）
 
 ## 友情链接
 
@@ -63,8 +59,20 @@ C++ 话题每日推送！
 
 <br/>
 
-LOGO 来源[狸花在画画](https://space.bilibili.com/244937198)，LOGO 角色《败犬女主太多了》里的八奈见杏菜。
+日报内容纯人工打字（和 Ctrl + C V）完成，保证内容质量。AI 只用于审稿，对此 AI 的评价是：
 
-makeinu 負け犬，直译败犬（表示自嘲），不是败犬女主哦。
+![img](/img/about-0.png)
 
-![img](/img/2025-10-index.png)
+只要月报的知乎阅读量 1000+ 就不停更！
+
+<br/>
+
+<br/>
+
+***
+
+<br/>
+
+<br/>
+
+LOGO 来源[狸花在画画](https://space.bilibili.com/244937198)，角色《败犬女主太多了》里的八奈见杏菜。makeinu 負け犬，直译败犬（表示自嘲），不是败犬女主哦。
