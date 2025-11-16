@@ -115,7 +115,7 @@ __tags__:
 
 对应知乎问题 <https://www.zhihu.com/question/474773455>。
 
-标准已经规定 [ref](https://en.cppreference.com/w/cpp/language/virtual.html): Function templates cannot be declared virtual，那么为什么这么规定呢？
+标准已经规定 ([ref](https://en.cppreference.com/w/cpp/language/virtual.html)): Function templates cannot be declared virtual，那么为什么这么规定呢？
 
 ***
 
@@ -208,9 +208,9 @@ C++ 老版本有拷贝或移动（有移动调移动）。C++17 规定了复制�
 
 ## 4. `requires { expr; }` 和 `requires expr` 的区别
 
-`requires { expr; }` 是 requires 表达式 (requires expression)，判断 expr 合不合法，可以得到一个 bool 值。[ref](https://en.cppreference.com/w/cpp/language/requires.html)
+`requires { expr; }` 是 requires 表达式 (requires expression)，判断 expr 合不合法，可以得到一个 bool 值。([ref](https://en.cppreference.com/w/cpp/language/requires.html))
 
-`requires expr` 是 requires 子句 (requires clause)，约束模板的语法，检查 expr 是否为真。[ref](https://en.cppreference.com/w/cpp/language/constraints.html)
+`requires expr` 是 requires 子句 (requires clause)，约束模板的语法，检查 expr 是否为真。([ref](https://en.cppreference.com/w/cpp/language/constraints.html))
 
 ```cpp
 template <typename T>
@@ -260,7 +260,7 @@ int main() {
 
 ## 7. 业务要求新代码和老代码的 `unordered_map` 遍历顺序必须一致，且老代码不能改
 
-你猜为什么这个容器叫 unordered_map。unordered_map 的遍历顺序是未指定的 [ref](https://eel.is/c++draft/unord.req#general-6)，依赖这个顺序的人应该被问候一顿。
+你猜为什么这个容器叫 unordered_map。unordered_map 的遍历顺序是未指定的 ([ref](https://eel.is/c++draft/unord.req#general-6))，依赖这个顺序的人应该被问候一顿。
 
 老代码不能改，可以让新代码锁编译器版本；或者把老代码的 unordered_map 实现抄出来，这样可以升级编译器。
 
