@@ -6,7 +6,7 @@ features:
 - details: 精选一些有意思的话题
   link: https://www.zhihu.com/column/c_1846629212653506560
   title: 每月精选
-- details: 有深度的知识合集
+- details: 有深度的知识合集（完善中）
   link: /topic
   title: 败犬专题
 hero:
