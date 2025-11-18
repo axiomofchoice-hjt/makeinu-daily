@@ -58,4 +58,5 @@ export default defineConfig({
   buildEnd: async (config: SiteConfig) => {
     writeFileSync(path.join(config.outDir, 'feed.rss'), await feed());
   },
+  base: process.env.VITE_APP_BASE_URL || '/',
 });
