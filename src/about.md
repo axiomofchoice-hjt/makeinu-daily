@@ -6,10 +6,6 @@ prev: false
 
 # 关于日报
 
-梦到什么说什么.jpg
-
-***
-
 日报内容纯人工打字（和 Ctrl + C V）完成，保证内容质量。AI 只用于审稿，对此 AI 的评价是：
 
 ![img](/img/about-0.png)
