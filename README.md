@@ -1,18 +1,12 @@
 # 欢迎光临败犬日报
 
-C++ 话题每日推送！
-
-<https://makeinu-daily.pages.dev>
+C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/NCJmtSyaoq)对线，或者直接[联系我](https://qm.qq.com/q/o2qw5F5Gp4)。
 
 ## 订阅日报
 
 每日推送：[RSS](https://makeinu-daily.pages.dev/feed.rss)
 
-每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)
-
-## 互动环节
-
-任何建议可以发评论区或[进群](https://qm.qq.com/q/NCJmtSyaoq)对线！
+每月精选：[知乎专栏](https://www.zhihu.com/column/c_1846629212653506560)（有人需要月报 RSS 吗）
 
 ## 友情链接
 
@@ -24,7 +18,7 @@ C++ 话题每日推送！
 
 1. [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 2. [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
-3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)
+3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)、[Don't ask to ask, just ask](https://dontasktoask.com/)、[The XY Problem](https://xyproblem.info/)
 
 <!--
 ## TODO
@@ -36,6 +30,7 @@ C++ 话题每日推送！
 3. 考虑用脚本同步发布到其他平台（知乎？）。
 4. 没有邮件推送。
 5. 标题已经固定到导航栏，但是手机端仍然会隐藏，没找到很好的做法。
+6. 侧边栏或主页加个日历
 
 ## 日报收录标准
 
