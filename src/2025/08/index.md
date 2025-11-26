@@ -309,7 +309,7 @@ public:
 
 ## 6. 怎么让变量在不同编译期条件下绑定不同类型的变量
 
-类似 `auto val = cond ? int{} : std::string{};`
+类似 `auto val = cond ? int{} : std::string{};`（但是三目肯定不行）
 
 可以这么做：
 
