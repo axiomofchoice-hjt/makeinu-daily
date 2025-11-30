@@ -1,8 +1,12 @@
 {
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/$1/index.html"
+            "source": "/:year(\\d{4})/:month(\\d{2})/:slug+",
+            "destination": "/:year/:month/:slug.html"
+        },
+        {
+            "source": "/topic/:slug+",
+            "destination": "/topic/:slug.html"
         }
     ]
 }
