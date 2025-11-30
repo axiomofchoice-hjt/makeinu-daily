@@ -106,9 +106,9 @@ __tags__:
 
 本月份的 C++ 话题速览！
 
-## 1. 线程安全随机数和 thread_local magic static
+## 4. 线程安全随机数和 magic thread_local
 
-[往期](/2025/02/20)介绍了 magic static，为了保证线程安全会加锁。如果用 `thread_local` 就不会加锁。
+[往期](/2025/02/20)介绍了 magic static，为了保证线程安全会加锁。magic thread_local（其实这个名字是我编的）也是只进行一次初始化，并且不需要加锁。
 
 推荐线程安全随机数使用这个小寄巧。
 
@@ -118,7 +118,7 @@ __tags__:
 #include <random>
 
 int randint(int min, int max) {
-    static thread_local std::mt19937 generator(std::random_device{}());
+    thread_local std::mt19937 generator(std::random_device{}());
     std::uniform_int_distribution<int> distribution(min, max);
     return distribution(generator);
 }
@@ -130,6 +130,8 @@ int main() {
 ```
 
 代码参考：<https://stackoverflow.com/questions/21237905/how-do-i-generate-thread-safe-uniform-random-numbers>
+
+需要注意这个链接里面，函数内变量同时用 static thread_local，static 是多余的，直接用 thread_local 就行了。
 
 ## 2. 继承中的 public private 影响内存布局
 
