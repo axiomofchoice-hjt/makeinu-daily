@@ -32,7 +32,7 @@ function recurse(sidebar: DefaultTheme.SidebarItem[], article: string[], link: s
       });
     } else if (link.endsWith('/index')) {
       sidebar.push({
-        text: "每月精选",
+        text: "Monthly",
         link: link.replace('/index', '/'),  // "/YYYY/MM/index" 变成 "/YYYY/MM/"，可以匹配到对应的侧边栏高亮
       });
     } else {
