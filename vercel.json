@@ -7,6 +7,10 @@
         {
             "source": "/topic/:slug+",
             "destination": "/topic/:slug.html"
+        },
+        {
+            "source": "/:slug+",
+            "destination": "/:slug.html"
         }
     ]
 }
