@@ -30,4 +30,8 @@ prev: false
 
 第二个失误是域名里带减号，非常不专业。
 
-实际上我在 vercel 上也部署了，并且买了 makeinu.today 域名解析到 vercel，现在已经可用。考虑到大家都收藏了 cloudflare pages，所以还是按 cloudflare pages 宣传吧。
+实际上我在 vercel 上也部署了，并且买了域名 <makeinu.today> 解析到 vercel，现在已经可用。考虑到大家都收藏了 cloudflare pages，所以还是按 cloudflare pages 宣传吧。
+
+***
+
+vitepress 做博客确实好用，都给我用 vitepress！
