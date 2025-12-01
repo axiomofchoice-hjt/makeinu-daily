@@ -20,7 +20,7 @@ prev: false
 
 ***
 
-写日报之后，经常为了一些细节到处翻资料查证，这是最花时间的地方。
+写日报经常为了一些细节到处翻资料查证，这是最花时间的地方。
 
 ***
 
@@ -30,7 +30,7 @@ prev: false
 
 第二个失误是域名里带减号，非常不专业。
 
-实际上我在 vercel 上也部署了，并且买了域名 <makeinu.today> 解析到 vercel，现在已经可用。考虑到大家都收藏了 cloudflare pages，所以还是按 cloudflare pages 宣传吧。
+实际上我在 vercel 上也部署了，并且买了域名 [makeinu.today](https://www.makeinu.today/) 解析到 vercel，现在已经可用。考虑到大家都收藏了 cloudflare pages，所以还是按 cloudflare pages 宣传吧。
 
 ***
 
