@@ -31,6 +31,7 @@ header = {
         "text": "败犬日报 " + previous.replace("/", "-"),
     },
 }
+current_file.parent.mkdir(parents=True, exist_ok=True)
 write_markdown_file(
     current_file,
     header,
