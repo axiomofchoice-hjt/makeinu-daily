@@ -5,6 +5,93 @@ next: false
 prev:
   link: /2025/10
   text: 败犬のC++每月精选 2025-10
+description: 本期日报包含 C++ 语言特性、标准库、ABI、性能优化、内存管理、编译构建、工程实践等多个话题，以及一些外部技术文章链接。
+__tags__:
+- title: '## 1. O(N) 原地合并两个有序数组'
+  score: 7/10
+  tags:
+  - C++
+  - 算法
+  - 性能优化
+  - 进阶知识
+  explanation: 讨论 O(N) 原地合并有序数组的算法理论，提及稳定性和论文实现，属于算法和性能优化的进阶知识。
+- title: '## 2. 标准库的 map 有没有非红黑树的实现'
+  score: 8/10
+  tags:
+  - C++
+  - STL
+  - 基础知识
+  explanation: 分析 std::map 的接口设计为何与红黑树绑定，并讨论其他数据结构（如 B 树、AVL 树）为何不适用，属于 STL 的基础知识。
+- title: '## 3. double 有多少位十进制有效数字'
+  score: 9/10
+  tags:
+  - C++
+  - 基础知识
+  - 硬件相关
+  explanation: 解释 double 的 IEEE 754 格式，通过尾数位数估算有效数字为 15，涉及硬件表示的基础知识。
+- title: '## 4. 右值引用传参时发生了什么'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 基础知识
+  explanation: 通过代码示例说明 prvalue、xvalue 和 lvalue 在右值引用传参时的转换过程，属于 C++ 值类别的基础知识。
+- title: '## 5. `std::vector<std::atomic<T>>` 会发生什么'
+  score: 8/10
+  tags:
+  - C++
+  - STL
+  - 内存管理
+  - 并发编程
+  - 基础知识
+  explanation: 解释由于 std::atomic 不可复制/移动，导致 std::vector 的某些操作（如 push_back、resize）编译失败，涉及
+    STL、内存管理和并发编程的基础知识。
+- title: '## 6. bool 值表示'
+  score: 9/10
+  tags:
+  - C++
+  - ABI
+  - 硬件相关
+  - 基础知识
+  - 需改进
+  explanation: 讨论 bool 在内存和寄存器中的值表示，引用 System V ABI 说明 false 为 0、true 为 1，但指出标准未强制规定，属于
+    ABI 和硬件相关的基础知识。需改进：部分表述（如“函数内部寄存器用非 0 表示 true”）可能引起混淆，建议更清晰地区分 ABI 规定与编译器实现。
+- title: '## 7. `/usr` 是否曾经是 user 的简写'
+  score: 6/10
+  tags:
+  - 其他
+  - 内容较主观
+  explanation: 探讨 Unix 文件系统中 /usr 目录名称的由来，引用维基百科和 System V 手册，但结论缺乏权威证实，内容较主观。
+- title: '## 8. 为什么 `int a[10]; int* p = a + 11;` 是未定义行为，`int* p = reinterpret_cast<int*>(114514);`
+    不是未定义行为'
+  score: 8/10
+  tags:
+  - C++
+  - 语法特性
+  - 内存管理
+  - 基础知识
+  explanation: 对比指针算术（数组越界）与整数到指针的 reinterpret_cast 在未定义行为上的差异，引用 cppref 说明规则，属于语法特性和内存管理的基础知识。
+- title: '## 9. fstream 打开文件，路径不能是 string_view'
+  score: 7/10
+  tags:
+  - C++
+  - 标准库特性
+  - 工程实践
+  - 基础知识
+  explanation: 解释 std::string_view 因缺乏空终止符而不能直接用于 fstream 打开文件，涉及标准库特性和工程实践的基础知识。
+- title: '## 10. 关于怎么 using 导入库的内容'
+  score: 6/10
+  tags:
+  - C++
+  - 工程实践
+  - 内容较主观
+  explanation: 提出使用命名空间别名（如 namespace fs = std::filesystem）而非 using 声明来导入库内容，属于工程实践建议，内容较主观。
+- title: '## 11. 一些文章'
+  score: 7/10
+  tags:
+  - 其他
+  explanation: 列举多个外部技术文章链接，涵盖 Linux 系统调用、Shader 编程、C++ 周刊、epoll/IOCP 比较、TensorCore
+    论文等，主题分散，标签为其他。
 ---
 
 ![img](/img/2025-11-index.png)
