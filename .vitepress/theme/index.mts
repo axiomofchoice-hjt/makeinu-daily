@@ -18,6 +18,7 @@ export default {
       category: 'Announcements', // default: `General`
       categoryId: 'DIC_kwDOM8IAtM4Ct-Nh',
       mapping: 'pathname', // default: `pathname`
+      strict: '1', // default: `0`
       inputPosition: 'top', // default: `top`
       lang: 'zh-CN', // default: `zh-CN`
       // i18n setting (Note: This configuration will override the default language set by lang)
