@@ -49,7 +49,7 @@ C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/NCJmt
 
 1. [如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)
 2. [群主教写简历 直播回放](https://www.bilibili.com/video/BV1BNtzz8E7A/)
-3. [如何科学地提问](https://ysyx.oscc.cc/docs/2407/f/1.html)、[Don't ask to ask, just ask](https://dontasktoask.com/)、[The XY Problem](https://xyproblem.info/)
+3. [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)、[Don't ask to ask, just ask](https://dontasktoask.com/)、[The XY Problem](https://xyproblem.info/)
 
 <br/>
 
