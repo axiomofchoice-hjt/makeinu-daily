@@ -4,6 +4,7 @@ import getSidebar from './sidebar.mjs';
 import feed from './feed.mjs';
 import { writeFileSync } from 'fs';
 import path from 'path';
+import { withPwa } from '@vite-pwa/vitepress';
 
 const host = 'https://makeinu-daily.pages.dev';
 
@@ -11,7 +12,7 @@ let articles = getArticles('docs');
 const sidebar = getSidebar(articles);
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withPwa(defineConfig({
   title: "败犬日报",
   description: "C++ Makeinu Daily",
   themeConfig: {
@@ -58,4 +59,44 @@ export default defineConfig({
     writeFileSync(path.join(config.outDir, 'feed.rss'), await feed());
   },
   base: process.env.VITE_APP_BASE_URL || '/',
-});
+  pwa: {
+    registerType: 'autoUpdate',
+    includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+    workbox: {
+      globPatterns: ['**/*.{js,css,ico,png,svg,woff2}'],
+      skipWaiting: true,
+      clientsClaim: true,
+      navigateFallback: undefined,
+      runtimeCaching: [
+        {
+          urlPattern: ({ request }) => request.destination === 'document',
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'html-pages',
+            expiration: {
+              maxEntries: 30,
+            },
+          },
+        },
+      ],
+    },
+    manifest: {
+      name: '败犬日报',
+      short_name: 'Makeinu Daily',
+      description: 'C++ Makeinu Daily',
+      theme_color: '#ffffff',
+      icons: [
+        {
+          src: '/pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        },
+      ],
+    },
+  },
+}));

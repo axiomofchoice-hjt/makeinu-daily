@@ -5,8 +5,10 @@
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^22.7.4",
+        "@vite-pwa/vitepress": "^1.1.0",
         "feed": "^4.2.2",
         "markdown-it-mathjax3": "^4.3.2",
+        "vite-plugin-pwa": "^1.2.0",
         "vitepress": "^1.6.4",
         "vitepress-plugin-comment-with-giscus": "^1.1.15"
     },
