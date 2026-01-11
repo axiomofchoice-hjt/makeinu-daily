@@ -12,7 +12,7 @@ def walk(dir: Path):
 
 
 def src_path() -> Path:
-    return Path(__file__).parent.parent / "src"
+    return Path(__file__).parent.parent / "docs"
 
 def get_articles() -> Dict[str, List[Path]]:
     src = src_path()

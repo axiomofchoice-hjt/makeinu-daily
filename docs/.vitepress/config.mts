@@ -7,7 +7,7 @@ import path from 'path';
 
 const host = 'https://makeinu-daily.pages.dev';
 
-let articles = getArticles('src');
+let articles = getArticles('docs');
 const sidebar = getSidebar(articles);
 
 // https://vitepress.dev/reference/site-config
@@ -54,7 +54,6 @@ export default defineConfig({
     math: true
   },
   cleanUrls: true,
-  srcDir: 'src',
   buildEnd: async (config: SiteConfig) => {
     writeFileSync(path.join(config.outDir, 'feed.rss'), await feed());
   },

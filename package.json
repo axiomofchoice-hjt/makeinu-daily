@@ -13,8 +13,8 @@
     "scripts": {
         "new": "python script/new_daily.py",
         "new-monthly": "python script/new_monthly.py",
-        "dev": "vitepress dev",
-        "build": "vitepress build",
-        "preview": "vitepress preview"
+        "dev": "vitepress dev docs",
+        "build": "vitepress build docs",
+        "preview": "vitepress preview docs"
     }
 }

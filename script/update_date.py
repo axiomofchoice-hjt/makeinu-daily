@@ -1,7 +1,7 @@
 from pathlib import Path
 import yaml
 
-root = Path(__file__).parent.parent / 'src'
+root = Path(__file__).parent.parent / 'docs'
 
 files = []
 for file in root.rglob("*.md"):
