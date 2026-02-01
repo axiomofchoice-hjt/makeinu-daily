@@ -1,7 +1,7 @@
 ---
 features:
 - details: 摘抄败犬群的 C++ 以及各种技术话题，分享一点群友的见解
-  link: 2026/01/28
+  link: 2026/01/29
   title: 每日推送
 - details: 精选一些有意思的话题
   link: https://www.zhihu.com/column/c_1846629212653506560
@@ -11,7 +11,7 @@ features:
   title: 败犬专题
 hero:
   actions:
-  - link: 2026/01/28
+  - link: 2026/01/29
     text: 开始
     theme: brand
   - link: about
