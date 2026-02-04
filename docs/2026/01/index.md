@@ -92,7 +92,15 @@ int main()
 
 答案是输出 `if`，非常反直觉。
 
-`f(1.0f), f(2)` 从左到右求值没问题，关键在于 v 是具名的，是个左值，不能匹配到自己类型的右值引用，选择隐式转换成临时值绑定 `float lvalue -> int prvalue` `int lvalue -> float prvalue`。
+参数包展开为 `(f(v_0), f(v_1));` 这里从左到右求值没问题。关键在于 v 是具名的，是个左值，左值不能匹配右值引用。
+
+```cpp
+void f(int&&);
+int&& v = 114;
+f(v);  // Rvalue reference to type 'int' cannot bind to lvalue of type 'int'
+```
+
+回到原问题，`float` 左值把 `f(float&&)` 的候选给移除了，在它视角下只有 `f(int&&)` 一个候选，只能先隐式转换成 `int` 纯右值，所以先输出了 "i"。另一边也同理，输出 "f"。
 
 ## 4. libstdc++ `unordered_map.clear()` 复杂度是错的
 
