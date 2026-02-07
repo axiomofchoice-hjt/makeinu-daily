@@ -224,32 +224,11 @@ int main() {
 }
 ```
 
-## 5. 为什么虚表里的函数从第 2 项开始
+## 5. RTTI 和虚表布局
 
-<https://godbolt.org/z/bqxvKGeTP>
+一般实现上 RTTI 指针在 `vptr[-1]` 的位置。
 
-```cpp
-struct Base {
-        virtual ~Base();
-};
-struct Child : Base {
-        ~Child();
-};
-void foo(Base* obj) noexcept {
-        [[assume(obj != nullptr)]];
-        delete obj;
-}
-```
-
-```text
-foo(Base*):
-        mov     rax, QWORD PTR [rdi]
-        jmp     [QWORD PTR [rax+8]]
-```
-
-第 1 项是 RTTI 项。
-
-关了 RTTI 的话，第一个 RTTI 项 是 0。这是为了让 RTTI 不影响 ABI，没开 RTTI 和 开了 的链接到一起也没事，只要没访问 RTTI 仅虚函数调用是没问题的。
+关了 RTTI 的话，RTTI 指针填的是 0 或 dummy typeinfo。这是为了让 RTTI 不影响 ABI，没开 RTTI 和 开了 的链接到一起也没事，只要没访问 RTTI 仅虚函数调用是没问题的。
 
 还有另外一个问题，为什么 RTTI 不和虚表放一起，而是间接寻址（类似指针）的方式访问？原因是一样的。如果 RTTI 信息和虚表放一起，开关 RTTI 会影响虚表布局。
 
