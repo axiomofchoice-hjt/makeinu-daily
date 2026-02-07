@@ -408,6 +408,17 @@ using T2 = is_specialization_of<std::vector<int>, std::vector>;
 
 C++26 反射能解决，但是模板参数类型得是反射得到的类型（std::meta::info），不能直接填类型和模板。
 
+***
+
+如果只考虑类型模板参数，可以这么写：
+
+```cpp
+template <class, template <class...> class>
+constexpr bool is_specialization_of_v = false;
+template <template <class...> class ClassTmpl, class... Ts>
+constexpr bool is_specialization_of_v<ClassTmpl<Ts...>, ClassTmpl> = true;
+```
+
 ## 13. 群友的名言警句
 
 保持对最佳实践的敏感真的很重要。问题可能千奇百怪，但如果团队平时就尽量去追求最佳实践，那很多都是可以避免的。—— bincat
