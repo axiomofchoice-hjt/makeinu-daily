@@ -14,20 +14,21 @@ export default async () => {
     copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
   });
 
-  let posts = await createContentLoader(['*.md', '*/*.md', '*/*/*.md'], {
+  let posts = await createContentLoader('**/*.md', {
     excerpt: true,
     render: true,
   }).load();
 
-  posts = posts.filter(post => 'date' in post.frontmatter);
+  posts = posts.filter(
+    post => 'date' in post.frontmatter && !post.src?.includes('今日无话题收录 :kissing_heart:'));
   posts.sort(
     (a, b) =>
       +new Date(b.frontmatter.date as string) -
       +new Date(a.frontmatter.date as string)
   );
 
-  // 保留最后 100 篇
-  posts.splice(100);
+  // 保留最后 50 篇
+  posts.splice(50);
 
   // 移除代码行号
   const pattern = /<div class="line-numbers-wrapper" aria-hidden="true">.*?<\/div>/gs;
