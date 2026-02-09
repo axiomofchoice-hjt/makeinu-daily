@@ -106,7 +106,7 @@ __tags__:
 
 本月份的 C++ 话题速览！
 
-## 4. 线程安全随机数和 magic thread_local
+## 1. 线程安全随机数和 magic thread_local
 
 [往期](/2025/02/20)介绍了 magic static，为了保证线程安全会加锁。magic thread_local（其实这个名字是我编的）也是只进行一次初始化，并且不需要加锁。
 
