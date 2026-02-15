@@ -20,7 +20,7 @@ export default async () => {
   }).load();
 
   posts = posts.filter(
-    post => 'date' in post.frontmatter && !post.src?.includes('今日无话题收录 :kissing_heart:'));
+    post => 'date' in post.frontmatter && !post.html?.includes('今日无话题收录'));
   posts.sort(
     (a, b) =>
       +new Date(b.frontmatter.date as string) -
