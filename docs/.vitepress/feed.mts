@@ -11,7 +11,7 @@ export default async () => {
     link: host,
     image: `${host}/favicon.jpg`,
     favicon: `${host}/favicon.ico`,
-    copyright: 'Copyright © 2024-present Axiomofchoice-hjt',
+    copyright: 'Copyright © 2024-present axiomofchoice-hjt',
   });
 
   let posts = await createContentLoader('**/*.md', {

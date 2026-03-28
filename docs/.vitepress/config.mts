@@ -35,7 +35,7 @@ export default withPwa(defineConfig({
     },
     footer: {
       message: 'Powered by <a href="https://vitepress.dev/">VitePress</a>. Released under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> License.',
-      copyright: 'Copyright © 2024-present <a href="https://github.com/axiomofchoice-hjt">Axiomofchoice-hjt</a>'
+      copyright: 'Copyright © 2024-present <a href="https://github.com/axiomofchoice-hjt">axiomofchoice-hjt</a>'
     },
     outline: {
       label: '页面导航'
