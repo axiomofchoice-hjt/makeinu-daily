@@ -1,7 +1,9 @@
 ---
 date: 2026/03/01
 title: 败犬のC++每月精选 2026-02
-next: false
+next:
+  link: /2026/03
+  text: 败犬のC++每月精选 2026-03
 prev:
   link: /2026/01
   text: 败犬のC++每月精选 2026-01
