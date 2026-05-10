@@ -105,7 +105,7 @@ __tags__:
   explanation: 分析 unique_ptr 的内存布局和空基类优化，涉及内存管理和标准库特性，属于基础知识。
 ---
 
-![img](/img/2025-02-index.png)
+![img](/img/2025-02-index.webp)
 
 # {{ $frontmatter.title }}
 

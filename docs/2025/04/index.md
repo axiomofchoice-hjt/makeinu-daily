@@ -98,7 +98,7 @@ __tags__:
   explanation: 澄清 shared_ptr 线程安全性的常见误解，强调同一 shared_ptr 实例操作的并发风险，属于内存管理和并发编程的进阶知识。
 ---
 
-![img](/img/2025-04-index.png)
+![img](/img/2025-04-index.webp)
 
 # 败犬のC++每月精选 2025-04
 
@@ -198,7 +198,7 @@ public private 会影响内存布局，这个很反直觉啊。C++ 的坑太多�
 
 qsort 类型信息损失太多了，根本不够看的。
 
-![img](/img/2025-04-09-0.png)
+![img](/img/2025-04-09-0.webp)
 
 ## 4. 用 constexpr if 实现 std::condition
 
@@ -262,7 +262,7 @@ int main() {
 
 喜欢我 C++ 的初始化吗：
 
-![img](/img/2025-04-27-0.png)
+![img](/img/2025-04-27-0.webp)
 
 [图片来源](https://www.zhihu.com/question/497428726/answer/2213203090)
 

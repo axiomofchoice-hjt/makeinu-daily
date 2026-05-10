@@ -91,7 +91,7 @@ __tags__:
 
 ## 1. 线程安全哈希表 benchmark
 
-![img](/img/2024-10-16-0.png)
+![img](/img/2024-10-16-0.webp)
 
 完整 benchmark 见 <https://www.boost.org/doc/libs/develop/libs/unordered/doc/html/unordered.html#benchmarks_boostconcurrent_flat_map>
 

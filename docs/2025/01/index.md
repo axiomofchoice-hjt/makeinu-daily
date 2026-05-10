@@ -114,7 +114,7 @@ __tags__:
   explanation: 分析函数形参生命周期结束时机的实现定义行为，通过 CWG2850 说明不同编译器的输出差异，属于专家知识。
 ---
 
-![img](/img/2025-01-index.png)
+![img](/img/2025-01-index.webp)
 
 # {{ $frontmatter.title }}
 

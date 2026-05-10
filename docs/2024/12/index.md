@@ -111,7 +111,7 @@ __tags__:
   explanation: 总结宏在预定义宏、代码生成、条件编译等方面的独特用途，讨论宏的适用场景，属于预处理和工程实践的基础知识。
 ---
 
-![img](/img/2024-12-index.png)
+![img](/img/2024-12-index.webp)
 
 # {{ $frontmatter.title }}
 

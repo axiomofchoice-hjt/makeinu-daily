@@ -118,7 +118,7 @@ __tags__:
   explanation: 收集多篇相关文章链接，涵盖简历写作、C++ 周刊、SIMD、内存池等多样化主题。
 ---
 
-![img](/img/2025-08-index.png)
+![img](/img/2025-08-index.webp)
 
 # 败犬のC++每月精选 2025-08
 

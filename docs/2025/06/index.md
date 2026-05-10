@@ -97,7 +97,7 @@ __tags__:
   explanation: 汇总多篇 C++ 相关文章链接，涵盖工程实践和面试话题，属于基础知识。
 ---
 
-![img](/img/2025-06-index.png)
+![img](/img/2025-06-index.webp)
 
 # 败犬のC++每月精选 2025-06
 

@@ -96,7 +96,7 @@ __tags__:
   explanation: 总结宏编程的局限性，强调优先使用模板的原则，包含主观建议，属于基础知识。
 ---
 
-![img](/img/topic-macro-cover.png)
+![img](/img/topic-macro-cover.webp)
 
 # 败犬のC++专题 宏魔法篇
 

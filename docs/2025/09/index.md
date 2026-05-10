@@ -105,7 +105,7 @@ __tags__:
   explanation: 推荐多篇外部文章，涵盖提问技巧、gcc patch、AI 新闻等，主题多样，属于基础知识。内容较主观：选择文章体现作者偏好。
 ---
 
-![img](/img/2025-09-index.png)
+![img](/img/2025-09-index.webp)
 
 # 败犬のC++每月精选 2025-09
 

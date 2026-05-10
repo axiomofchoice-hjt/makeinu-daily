@@ -107,7 +107,7 @@ __tags__:
     的进阶知识。
 ---
 
-![img](/img/2025-03-index.png)
+![img](/img/2025-03-index.webp)
 
 # {{ $frontmatter.title }}
 
