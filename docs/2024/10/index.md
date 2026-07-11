@@ -139,7 +139,7 @@ $p \le 1.618$ 就是这么来的。
 
 虽然是未定义行为但也不会出什么问题。最好可以 bitcast / memcpy，这是标准行为。
 
-严格别名的 reinterept_cast 都是 ub。
+严格别名的 reinterpret_cast 都是 ub。
 
 ## 4. c 如何提供接口让 cpp 传 lambda 进去
 

@@ -56,7 +56,7 @@ __tags__:
   - 编译期
   - 进阶知识
   explanation: 展示使用 lambda 和 constexpr if 实现条件类型绑定的技巧，注意返回值类型推导的限制。
-- title: '## 7. `buildin_ctz(0)` 是未定义行为'
+- title: '## 7. `__builtin_ctz(0)` 是未定义行为'
   score: 8/10
   tags:
   - C++
@@ -334,7 +334,7 @@ auto val = [] {
 }();
 ```
 
-## 7. `buildin_ctz(0)` 是未定义行为
+## 7. `__builtin_ctz(0)` 是未定义行为
 
 是的。ref <https://gcc.gnu.org/onlinedocs/gcc/Bit-Operation-Builtins.html#index-_005f_005fbuiltin_005fctz>
 
