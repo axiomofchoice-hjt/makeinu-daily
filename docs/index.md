@@ -43,7 +43,7 @@ C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/NCJmt
 
 ## 友情链接
 
-[败犬群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
+[败犬 AI 群 786115408](https://qm.qq.com/q/NCJmtSyaoq)，[败犬古法群 1064506907](https://qm.qq.com/q/53FGpe4KYU)，[群主博客](https://zclll.com/)，[C++ 中文周刊](https://wanghenshui.github.io/cppweeklynews/)
 
 [cppref](https://en.cppreference.com/)，[中文镜像](https://cppref.juvw.xyz:2333/)
 
