@@ -29,7 +29,7 @@ title: 败犬日报
 
 ## 欢迎光临败犬日报
 
-C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/NCJmtSyaoq)对线，或者直接[联系我](https://qm.qq.com/q/o2qw5F5Gp4)。
+C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/53FGpe4KYU)对线，或者直接[联系我](https://qm.qq.com/q/o2qw5F5Gp4)。
 
 如果你是 C++ 新人，建议阅读[如何学习 C++ 的解答](https://zclll.com/index.php/cpp/get_started_cpp.html)。
 
