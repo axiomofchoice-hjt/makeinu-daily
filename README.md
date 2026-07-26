@@ -1,6 +1,6 @@
 # 欢迎光临败犬日报
 
-C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/NCJmtSyaoq)对线，或者直接[联系我](https://qm.qq.com/q/o2qw5F5Gp4)。
+C++ 话题每日推送！有任何想法欢迎[进群](https://qm.qq.com/q/53FGpe4KYU)对线，或者直接[联系我](https://qm.qq.com/q/o2qw5F5Gp4)。
 
 ## 订阅日报
 
